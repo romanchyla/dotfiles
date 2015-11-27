@@ -303,3 +303,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# prevent ctrl-d logouts
+export ignoreeof=3

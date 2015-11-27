@@ -13,7 +13,7 @@ for name in *; do
     fi
     target="$HOME/$target"
 
-    if [ -h $target ]; then
+    if [ -f $target ]; then
       cp -f $target $target.bkup
       rm $target
     elif [ -d $target ]; then

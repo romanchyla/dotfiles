@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Not executed unless requested
+
+# esp8266 toolchain
+test -d ${/dvt/workspace/esp-open-sdk/xtensa-lx106-elf/bin} &&
+  export PATH=/dvt/workspace/esp-open-sdk/xtensa-lx106-elf/bin:/dvt/workspace/esp-open-sdk/sdk/bin:$PATH
+
+# raspberry pi
+test -d ${/dvt/workspace/raspberry/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin} &&
+  export PATH=/dvt/workspace/raspberry/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH
