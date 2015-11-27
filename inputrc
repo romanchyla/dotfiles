@@ -1,5 +1,6 @@
 # /etc/inputrc - global inputrc for libreadline
 # See readline(3readline) and `info rluserman' for more information.
+# Ctrl-V [key combination] or cat > /dev/null
 
 # Be 8 bit clean.
 set input-meta on
@@ -49,6 +50,10 @@ $if mode=emacs
 "\e\e[C": forward-word
 "\e\e[D": backward-word
 
+# mappings for Alt-arrows
+"\e[1;3D": beginning-of-line
+"\e[1;3C": end-of-line
+
 $if term=rxvt
 "\e[8~": end-of-line
 "\eOc": forward-word
@@ -63,4 +68,19 @@ $endif
 # "\e[H": beginning-of-line
 # "\e[F": end-of-line
 
+$endif
+
+
+# Show tab-completion options on first <tab> instead of waiting
+# for multiple completions.
+set show-all-if-ambiguous on
+
+# Case insensitive tab-completion
+set completion-ignore-case on
+
+$if Bash
+  # In bash only, enable "magic space" so that typing space
+  # will show completions. i.e. !!_ (where _ is space)
+  # will expand !! for you.
+  Space: magic-space
 $endif
