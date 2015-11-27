@@ -14,9 +14,10 @@ for name in *; do
     target="$HOME/$target"
 
     if [ -h $target ]; then
-      rm $target
+      cp -f $target $target.bkup
     elif [ -d $target ]; then
-      rm -rf $target
+      rm -fr $target.bkup
+      cp -fr $target $target.bkup
     fi
 
     case $UNAME in
