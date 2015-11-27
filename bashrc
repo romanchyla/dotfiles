@@ -305,3 +305,5 @@ fi
 
 # prevent ctrl-d logouts
 export ignoreeof=3
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
