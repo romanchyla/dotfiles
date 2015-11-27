@@ -4,38 +4,15 @@
 [color]
   ui = true
 
-[core]
-	excludesfile = /opt/boxen/config/git/gitignore
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-
-[difftool]
-	prompt = false
-
-[diff]
-	tool = Kaleidoscope
-
 [github]
-	user = mitchellh
+	user = romanchyla
 
 [push]
 	default = tracking
 
-[sendemail]
-	smtpencryption = tls
-	smtpserver = smtp.gmail.com
-	smtpuser = mitchell.hashimoto@gmail.com
-	smtpserverport = 587
-	chainreplyto = false
-	aliasesfile = /Users/mitchellh/.gitaliases
-	aliasfiletype = mailrc
-
 [user]
-	name = Mitchell Hashimoto
-	email = mitchell.hashimoto@gmail.com
+	name = Roman Chyla
+	email = roman.chyla@gmail.com
 
 [branch]
-	autosetuprebase = always
-[credential]
-	helper = osxkeychain
+	autosetupmerge = true # true = for remote branches; 'always' == also for remote
