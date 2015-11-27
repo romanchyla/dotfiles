@@ -100,7 +100,22 @@ export FTP_PASSIVE
 
 # Ignore backups, CVS directories
 FIGNORE="~:CVS:#:.pyc"
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoredups:ignorespace
+# append to the history file, don't overwrite it
+shopt -s histappend
+# reedit a history substitution line if it failed
+shopt -s histreedit
+# edit a recalled hisotry line before executing
+shopt -s histverify
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check window size after each command and update if
+# necessary (values of LINES and COLUMNS)
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # XDG config
 export XDG_CONFIG_HOME="$HOME"
@@ -152,9 +167,32 @@ parse_git_branch() {
     git symbolic-ref HEAD 2> /dev/null | sed 's#\(.*\)\/\([^\/]*\)$# \2#'
 }
 
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
 #-------------------------------------------------------------------------------
 # Aliases / Functions
 #-------------------------------------------------------------------------------
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 alias dul='du -h --max-depth=1'
 alias hi='history | tail -20'
 
@@ -172,6 +210,11 @@ alias gt='git tag'
 # Others
 alias be='bundle exec'
 alias v='vagrant'
+
+# Alias definitions.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # Usage: puniq [path]
 # Remove duplicate entries from a PATH style value while
@@ -209,7 +252,7 @@ fi
 # Other
 #-------------------------------------------------------------------------------
 # Plugins
-PLUGINS=( "depot_tools" "git" "go" "java" "rbenv" "scala" "tmux" "windows" )
+PLUGINS=( "depot_tools" "git" "java" "tmux" "windows" )
 
 for plugin in "${PLUGINS[@]}"
 do
@@ -249,4 +292,14 @@ case $UNAME in
         ;;
 esac
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+

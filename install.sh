@@ -15,9 +15,11 @@ for name in *; do
 
     if [ -h $target ]; then
       cp -f $target $target.bkup
+      rm $target
     elif [ -d $target ]; then
       rm -fr $target.bkup
       cp -fr $target $target.bkup
+      rm -fr $target
     fi
 
     case $UNAME in
