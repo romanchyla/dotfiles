@@ -1,4 +1,4 @@
-" Installation Instructions
+" Installationn Instructions
 "	1. Place file in home directory as .vimrc
 "	2. Run the following command in terminal
 "		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -6,12 +6,29 @@
 "		:PlugInstall
 "	5. Restart Vim
 
+" ----------------- key mappings -------------------------------------
+ino jk <ESC>
+inoremap <C-[> <ESC>
+inoremap <C-]> <ESC>
+let mapleader = "\<Space>"
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
+" Edit .vimrc  \v
+nmap <leader>v :edit $MYVIMRC<CR>
+" Open/close tagbar with \b
+nmap <silent> <leader>b :TagbarToggle<CR>
+" Open/close NERDTree Tabs with \t
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
 
 set nocompatible
 set encoding=utf-8
+
+"---------------------Plugins ----------------------------------------
 
 call plug#begin()
 " documentation:
@@ -38,19 +55,6 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-filetype plugin indent on
-
-set backspace=indent,eol,start
-set ruler
-set number
-set showcmd
-set incsearch
-set hlsearch
-
-syntax on
-
-set mouse=a
-
 " ----- Plugin-Specific Settings --------------------------------------
 
 " ----- altercation/vim-colors-solarized settings -----
@@ -65,8 +69,6 @@ let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
 
 " ----- jistr/vim-nerdtree-tabs -----
-" Open/close NERDTree Tabs with \t
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " To have NERDTree always open on startup
 let g:nerdtree_tabs_open_on_console_startup = 0
 
@@ -94,9 +96,22 @@ let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
-" Open/close tagbar with \b
-nmap <silent> <leader>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 "
+
+" ---------------- vim settings ----------------------
+filetype plugin indent on
+
+set backspace=indent,eol,start
+set ruler
+set number
+set showcmd
+set incsearch
+set hlsearch
+set hidden " dont bother with unsaved buffers
+syntax on
+
+set mouse=a
+
 
