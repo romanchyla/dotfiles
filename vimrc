@@ -6,10 +6,11 @@
 "		:PlugInstall
 "	5. Restart Vim
 
+set nocompatible
+
 " ----------------- key mappings -------------------------------------
+
 ino jk <ESC>
-inoremap <C-[> <ESC>
-inoremap <C-]> <ESC>
 let mapleader = "\<Space>"
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
@@ -25,7 +26,6 @@ nmap <leader>l :set list!<CR>
 " inoremap jk <ESC>
 let mapleader = "\<Space>"
 
-set nocompatible
 set encoding=utf-8
 
 "---------------------Plugins ----------------------------------------
@@ -58,9 +58,9 @@ call plug#end()
 " ----- Plugin-Specific Settings --------------------------------------
 
 " ----- altercation/vim-colors-solarized settings -----
-"set background=dark
+set background=dark
 "let g:solarized_termcolors=256
-"colorscheme solarized
+colorscheme solarized
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar
