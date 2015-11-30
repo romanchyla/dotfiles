@@ -1,21 +1,33 @@
-
-alias mount_crypt="encfs ~/.crypt ~/crypt"
-alias umount_crypt="fusermount -u ~/crypt"
-alias mount-securedrop="encfs ~/Dropbox/securedrop/ ~/securedrop"
-alias umount-securedrop="fusermount -u ~/securedrop"
-
-
-alias tunnel-hudson="mssh rchyla@pogo1.cfa.harvard.edu rchyla@adsate.cfa.harvard.edu -L9091:adsate.cfa.harvard.edu:9090"
-alias foxyproxy='ssh -f -N -L 9998:adsset.cfa.harvard.edu:22 pogo3.cfa.harvard.edu; ssh -f -N -D 9999 localhost -p 9998'
-alias adsxmysqltunnel='ssh -N -f -L 3307:adsx.cfa.harvard.edu:3306 pogo3.cfa.harvard.edu'
-alias st=/dvt/subtext/sublime_text
-alias rabbitmqtunnel='ssh -N -f -L 15672:adsx.cfa.harvard.edu:15672 pogo3.cfa.harvard.edu'
-alias mongotunnel='ssh -N -f -L 27018:adsx.cfa.harvard.edu:27017 pogo3.cfa.harvard.edu'
-alias psqltunnel='ssh -N -f -L 5433:adsx.cfa.harvard.edu:5432 pogo3.cfa.harvard.edu'
-alias consultunnel='ssh -t -L 8501:localhost:8501 rchyla@pogo3.cfa.harvard.edu ssh -t -L 8501:localhost:8501 rchyla@adsx.cfa.harvard.edu ssh -i ~/.ssh/micro.pem -L 8501:consul.adsabs:8500 ec2-user@52.0.152.20'
-alias solrtunnel='ssh -t -L 8984:localhost:8984 rchyla@pogo3.cfa.harvard.edu ssh -t -L 8984:localhost:8984 rchyla@adsx.cfa.harvard.edu ssh -i ~/.ssh/micro.pem -L 8984:solr-searcher.adsabs:8983 ec2-user@52.0.152.20'
-alias kibanatunnel='ssh -t -L 5601:localhost:5601 rchyla@pogo3.cfa.harvard.edu ssh -t -L 5601:localhost:5601 rchyla@adsx.cfa.harvard.edu ssh -i ~/.ssh/micro.pem -L 5601:elastickibana.adsabs:5601 ec2-user@52.0.152.20'
-
-
-alias ox='xdg-open'
-alias webstorm-fix-keyboard="sudo ibus restart"
+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
