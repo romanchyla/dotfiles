@@ -184,34 +184,6 @@ esac
 #-------------------------------------------------------------------------------
 # Aliases / Functions
 #-------------------------------------------------------------------------------
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-alias dul='du -h --max-depth=1'
-alias hi='history | tail -20'
-
-# Git aliases
-alias ga='git add'
-alias gc='git commit'
-alias gco='git checkout'
-alias gcp='git cherry-pick'
-alias gdiff='git diff'
-alias gl='git prettylog'
-alias gp='git push'
-alias gs='git status'
-alias gt='git tag'
-
-# Others
-alias be='bundle exec'
-alias v='vagrant'
-
-# Alias definitions.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -287,13 +259,13 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
     source $HOME/.rvm/scripts/rvm
 fi
 
-# Always put /usr/bin first.
+# Always put /usr/local/bin first.
 case $UNAME in
     MINGW32*)
         ;;
     *)
         # Various sbins
-        PATH="/usr/bin:/usr/local/bin:$PATH"
+        PATH="/usr/local/bin:/usr/bin:$PATH"
         ;;
 esac
 
@@ -312,5 +284,6 @@ fi
 export ignoreeof=3
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+unset MANPATH # for for .fzf
 
 [ -f ~/.localenv ] && source ~/.localenv
