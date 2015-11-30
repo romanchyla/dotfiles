@@ -1,3 +1,5 @@
+source ~/.screenrc
+
 screen -t vim 0 vim
 split
 focus down

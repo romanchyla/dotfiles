@@ -7,11 +7,11 @@ defscrollback 5000
 
 # no welcome message
 startup_message off
-
-# 256 colors
-attrcolor b ".I"
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-defbce on
+termcapinfo xterm-256color ti@:te@
 
 # mouse tracking allows to switch region focus by clicking
 mousetrack on
+
+# easier scroll
+bindkey "^[[5~" eval 'copy' 'stuff ^b'  # PgUp | Enter copy/scrollback mode and page up
+bindkey "^[[6~" eval 'copy' "stuff ^f'  # PgDown | Enter copy/scrollback mode and page down

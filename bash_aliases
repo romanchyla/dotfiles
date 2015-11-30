@@ -30,4 +30,4 @@ alias webstorm-fix-keyboard="sudo ibus restart"
 # screens
 alias svim='screen -c ~/.vimscreen'
 alias slua='screen -c ~/.luascreen.secret'
-alias swork='screen -c ~/.workscreen'
+alias swork='screen -c ~/.workscreen.secret'
