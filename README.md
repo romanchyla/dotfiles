@@ -9,4 +9,5 @@ dotfiles:
 ## Installation
 
     git clone git://github.com/romanchyla/dotfiles.git
+    ./bootstrap.sh
     dotfiles/install.sh

@@ -6,3 +6,5 @@ nvim/plugged
 nvim/swap
 nvim/undo
 *.elc
+*.swp
+tags

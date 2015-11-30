@@ -6,7 +6,7 @@
 UNAME=$(uname)
 
 for name in *; do
-  if [ ! $name == "README.md" -a ! $name == "install.sh" ]; then
+  if [ ! $name == "README.md" -a ! $name == "install.sh" -a ! $name == "bootstrap.sh" ]; then
     target="$name"
     if [ ! $name == "nvim" ]; then
         target=".$name"
@@ -15,6 +15,8 @@ for name in *; do
 
     if [ -f $target ]; then
       cp -f $target $target.bkup
+      rm $target
+    elif [ -h $target ]; then
       rm $target
     elif [ -d $target ]; then
       rm -fr $target.bkup

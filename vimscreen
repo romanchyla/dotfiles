@@ -1,0 +1,7 @@
+screen -t vim 0 vim
+split
+focus down
+screen -t bash 1 bash
+resize 10
+
+focus up
