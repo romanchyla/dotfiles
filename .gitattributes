@@ -2,4 +2,4 @@ bash_aliases filter=openssl diff=openssl
 luascreen filter=openssl diff=openssl
 *.secret filter=openssl diff=openssl
 [merge]
-    renormalize = true
+renormalize = true
