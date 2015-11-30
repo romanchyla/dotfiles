@@ -307,3 +307,5 @@ fi
 export ignoreeof=3
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+[ -f ~/.localenv ] && source ~/.localenv
