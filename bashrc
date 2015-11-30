@@ -216,6 +216,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_aliases.secret ]; then
+    . ~/.bash_aliases.secret
+fi
+
+
 # Usage: puniq [path]
 # Remove duplicate entries from a PATH style value while
 # retaining the original order.
