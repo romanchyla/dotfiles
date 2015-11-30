@@ -1,3 +1,4 @@
-* filter=openssl diff=openssl
+bash_aliases filter=openssl diff=openssl
+luascreen filter=openssl diff=openssl
 [merge]
     renormalize = true
