@@ -5,7 +5,6 @@ alias mount-securedrop="encfs ~/Dropbox/securedrop/ ~/securedrop"
 alias umount-securedrop="fusermount -u ~/securedrop"
 
 
-
 alias tunnel-hudson="mssh rchyla@pogo1.cfa.harvard.edu rchyla@adsate.cfa.harvard.edu -L9091:adsate.cfa.harvard.edu:9090"
 alias foxyproxy='ssh -f -N -L 9998:adsset.cfa.harvard.edu:22 pogo3.cfa.harvard.edu; ssh -f -N -D 9999 localhost -p 9998'
 alias adsxmysqltunnel='ssh -N -f -L 3307:adsx.cfa.harvard.edu:3306 pogo3.cfa.harvard.edu'
