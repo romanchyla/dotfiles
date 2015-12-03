@@ -7,6 +7,11 @@
 "	5. Restart Vim
 
 set nocompatible
+" autoload the changes from disk
+set autoread
+au CursorHold,CursorHoldI * silent! checktime
+" copy into system clipboard
+set clipboard=unnamedplus
 
 " ----------------- key mappings -------------------------------------
 
@@ -87,7 +92,7 @@ let g:syntastic_auto_loc_list = 1
 
 " ----- xolox/vim-easytags settings -----
 " Where to look for tags files
-set tags=./tags;,~/.vimtags
+set tags=~/.vimtags
 " Sensible defaults
 let g:easytags_events = ['BufReadPost', 'BufWritePost']
 let g:easytags_async = 1

@@ -210,13 +210,24 @@ function start_ssh_agent {
      ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
      chmod 0600 ${SSH_ENV}
      . ${SSH_ENV} > /dev/null
+     
      ssh-add
+
 }
 
 # Source SSH agent settings if it is already running, otherwise start
 # up the agent proprely.
 if [ -f "${SSH_ENV}" ]; then
      . ${SSH_ENV} > /dev/null
+
+     # Check for broken SSH socket
+     if [ ! -S "${SSH_AUTH_SOCK}" -o ! -w "${SSH_AUTH_SOCK}" ]; then
+         echo "Removing ~/.ssh/environment as socket is broken"
+	 rm ${SSH_ENV}
+         start_ssh_agent
+     fi
+
+
      # ps ${SSH_AGENT_PID} doesn't work under cywgin
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
          start_ssh_agent
