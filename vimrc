@@ -76,6 +76,7 @@ Plug 'majutsushi/tagbar'
 " installation: git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf ~/.fzf/install
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-obsession'
 call plug#end()
 
 " ----- Plugin-Specific Settings --------------------------------------
