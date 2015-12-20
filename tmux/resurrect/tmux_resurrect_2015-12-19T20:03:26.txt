@@ -1,0 +1,6 @@
+pane	test	1	:bash	1	:*	0	:/home/rca/dotfiles/tmux	1	bash	:
+pane	test	1	:bash	1	:*	1	:/home/rca	0	vim	:vim /home/rca/.tmux.conf
+pane	test	2	:bash	0	:-	0	:/home/rca/dotfiles	1	bash	:
+window	test	1	1	:*	773e,204x55,0,0{102x55,0,0,0,101x55,103,0,1}
+window	test	2	0	:-	c29f,204x55,0,0,2
+state	test	

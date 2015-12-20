@@ -294,6 +294,12 @@ fi
 # prevent ctrl-d logouts
 export ignoreeof=3
 
+# Make C-S pass to the app
+if [ -t 1 ]; then
+  bind -r '\C-s'
+  stty -ixon
+fi
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 unset MANPATH # for for .fzf
 
