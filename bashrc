@@ -133,6 +133,9 @@ export PAGER MANPAGER
 #-------------------------------------------------------------------------------
 # Prompt
 #-------------------------------------------------------------------------------
+export LS_OPTIONS='--color=auto'
+eval "`dircolors`"
+
 RED="\[\033[0;31m\]"
 BROWN="\[\033[0;33m\]"
 GREY="\[\033[0;97m\]"
@@ -159,7 +162,7 @@ prompt_compact() {
 
 prompt_color() {
     PS1="${GREEN}\W\$(parse_git_branch) → ${GREY}"
-    PS2="\[[33;1m\]continue \[[0m[1m\]> "
+    PS2="${GREY}\W >> "
 }
 
 parse_git_branch() {
