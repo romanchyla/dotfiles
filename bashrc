@@ -161,8 +161,8 @@ prompt_compact() {
 }
 
 prompt_color() {
-    PS1="${GREEN}\W\$(parse_git_branch) → ${GREY}"
-    PS2="${GREY}\W >> "
+    PS1="${GREEN}\W\$(parse_git_branch) → ${PS_CLEAR}"
+    PS2="${GREY}\W >>${PS_CLEAR} "
 }
 
 parse_git_branch() {
@@ -300,7 +300,7 @@ export ignoreeof=3
 # Make C-S pass to the app
 if [ -t 1 ]; then
   bind -r '\C-s'
-  stty -ixon
+  stty -ixon 2> /dev/null
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
