@@ -56,7 +56,7 @@ nmap <silent> <leader>h :Lines<CR>
 nmap <silent> <leader>b :Buffers<CR>
 
 nmap <silent><leader>n :tabnext<CR>
-nmap <silent><leader>p :tabprev<CR>
+nmap <silent><leader>N :tabprev<CR>
 "---------------------Plugins ----------------------------------------
 
 call plug#begin()

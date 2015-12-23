@@ -9,3 +9,5 @@ nvim/undo
 *.swp
 tags
 atom/compile-cache
+atom/storage
+atom/\.*
