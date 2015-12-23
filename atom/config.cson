@@ -3,6 +3,9 @@
     defaultHeight: 225
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "vim-mode"
+    ]
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
@@ -13,7 +16,6 @@
     showIndentGuide: true
     softTabs: false
     softWrap: true
-    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "d1097b79-5d80-4ef8-d849-fb1769625930"
   welcome:
