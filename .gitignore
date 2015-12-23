@@ -8,3 +8,4 @@ nvim/undo
 *.elc
 *.swp
 tags
+atom/compile-cache

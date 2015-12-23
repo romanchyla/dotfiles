@@ -162,7 +162,7 @@ prompt_compact() {
 
 prompt_color() {
     PS1="${GREEN}\W\$(parse_git_branch) → ${PS_CLEAR}"
-    PS2="${GREY}\W >>${PS_CLEAR} "
+    PS2="${GREY}>${PS_CLEAR} "
 }
 
 parse_git_branch() {

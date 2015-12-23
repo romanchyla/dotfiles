@@ -11,7 +11,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias dul='du -h --max-depth=1'
 alias hi='history | tail -20'
-
+alias cat='cat -v'
 # Git aliases
 alias ga='git add'
 alias gc='git commit'

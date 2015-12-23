@@ -31,6 +31,9 @@ set smarttab
 " always uses spaces instead of tab characters
 set expandtab
 
+" Store swap files in fixed location, not current directory.
+set dir=~/.vimswap//,/var/tmp//,/tmp//,.
+
 " ----------------- key mappings -------------------------------------
 
 ino jk <ESC>
@@ -52,6 +55,8 @@ nmap <silent> <leader>f :BLines<CR>
 nmap <silent> <leader>h :Lines<CR>
 nmap <silent> <leader>b :Buffers<CR>
 
+nmap <silent><leader>n :tabnext<CR>
+nmap <silent><leader>p :tabprev<CR>
 "---------------------Plugins ----------------------------------------
 
 call plug#begin()
@@ -77,14 +82,16 @@ Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-obsession'
+Plug 'vim-scripts/guicolorscheme.vim'
 call plug#end()
 
 " ----- Plugin-Specific Settings --------------------------------------
 
 " ----- altercation/vim-colors-solarized settings -----
-set background=dark
+"set background=dark
 "let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
+
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar

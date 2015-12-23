@@ -1,0 +1,5 @@
+"*":
+  "exception-reporting":
+    userId: "d1097b79-5d80-4ef8-d849-fb1769625930"
+  welcome:
+    showOnStartup: false
