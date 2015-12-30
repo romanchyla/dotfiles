@@ -1,10 +1,14 @@
 "*":
   Termrk:
-    defaultHeight: 225
+    defaultHeight: 255
+  "autocomplete-plus":
+    enableAutoActivation: false
   core:
     autoHideMenuBar: true
     disabledPackages: [
       "vim-mode"
+      "Termrk"
+      "term"
     ]
     themes: [
       "one-dark-ui"
@@ -18,5 +22,6 @@
     softWrap: true
   "exception-reporting":
     userId: "d1097b79-5d80-4ef8-d849-fb1769625930"
+  "linter-lua": {}
   welcome:
     showOnStartup: false

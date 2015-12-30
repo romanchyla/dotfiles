@@ -1,3 +1,9 @@
 Termrk@0.1.28
+enhanced-tabs@1.4.0
+language-lua@0.9.4
+linter@1.11.3
+linter-lua@1.0.0
+term@0.2.4
+term3@0.19.2
 vim-mode@0.64.0
 

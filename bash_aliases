@@ -28,7 +28,7 @@ alias be='bundle exec'
 alias v='vagrant'
 alias ox='xdg-open'
 alias webstorm-fix-keyboard="sudo ibus restart"
-
+alias restart-wifi="echo \"sudo kill -9 `pidof NetworkManager`\"; sudo kill -9 `pidof NetworkManager`"
 # screens
 alias svim='screen -c ~/.vimscreen'
 alias slua='screen -c ~/.luascreen.secret'
