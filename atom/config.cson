@@ -3,6 +3,9 @@
     defaultHeight: 255
   "autocomplete-plus":
     enableAutoActivation: false
+  "autocomplete-python":
+    extraPaths: "$PROJECT/python/lib/python2.7/site-packages"
+    pythonPaths: "$PROJECT/python/bin/python;/usr/bin/python"
   core:
     autoHideMenuBar: true
     disabledPackages: [
@@ -23,5 +26,10 @@
   "exception-reporting":
     userId: "d1097b79-5d80-4ef8-d849-fb1769625930"
   "linter-lua": {}
+  "linter-pep8":
+    maxLineLength: 100
   welcome:
     showOnStartup: false
+".python.source":
+  editor:
+    showInvisibles: true
