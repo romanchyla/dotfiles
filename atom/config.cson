@@ -9,9 +9,10 @@
   core:
     autoHideMenuBar: true
     disabledPackages: [
-      "vim-mode"
       "Termrk"
       "term"
+      "linter-pep8"
+      "linter-pylama"
     ]
     themes: [
       "one-dark-ui"
@@ -25,9 +26,19 @@
     softWrap: true
   "exception-reporting":
     userId: "d1097b79-5d80-4ef8-d849-fb1769625930"
+  linter:
+    ignoreVCSIgnoredFiles: false
+    showErrorPanel: false
   "linter-lua": {}
   "linter-pep8":
     maxLineLength: 100
+  "linter-pylama":
+    ignoreErrorsAndWarnings: "D103,D401,W0612"
+    usePylint: true
+  "linter-pylint": {}
+  "vim-mode":
+    startInInsertMode: true
+    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
 ".python.source":

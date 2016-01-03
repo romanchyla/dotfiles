@@ -1,4 +1,10 @@
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
   'ctrl-h': 'find-and-replace:select-next'
 'atom-text-editor:not([mini])':
-  'ctrl-d': 'editor:delete-line'	
+  'ctrl-d': 'editor:delete-line'
+'atom-text-editor.vim-mode':
+  'ctrl-c': 'core:copy'
+'atom-text-editor.vim-mode.normal-mode':
+  'ctrl-v': 'core:paste'
+'.platform-linux atom-text-editor':
+  'ctrl-shift-L': 'custom:toggle-linter'
