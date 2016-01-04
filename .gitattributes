@@ -1,1 +1,1 @@
-*.secret filter=openssl diff=openssl
+*.secret* filter=openssl diff=openssl
