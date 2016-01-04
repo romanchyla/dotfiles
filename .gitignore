@@ -13,3 +13,7 @@ atom/storage
 atom/\.*
 atom/blob-store
 provision/last_run
+eclipse/org.eclipse.oomph.p2
+cache/
+last_run
+*~

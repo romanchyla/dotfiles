@@ -14,6 +14,9 @@
   <projectCatalog
       href="index:/org.eclipse.setup#//@projectCatalogs[name='com.github']"/>
   <defaultProductVersion
+      key="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.java']"
+      value="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.java']/@versions[name='latest.released']"/>
+  <defaultProductVersion
       key="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.cpp']"
       value="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.cpp']/@versions[name='latest']"/>
   <defaultProductVersion
@@ -22,7 +25,4 @@
   <defaultProductVersion
       key="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='org.eclipse.platform.ide']"
       value="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='org.eclipse.platform.ide']/@versions[name='latest.released']"/>
-  <defaultProductVersion
-      key="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.java']"
-      value="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.java']/@versions[name='latest.released']"/>
 </setup:CatalogSelection>

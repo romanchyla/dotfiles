@@ -1,4 +1,0 @@
-#P2 clients store their default bundle pool locations here
-#Sun Jan 03 22:31:43 EST 2016
-org.eclipse.oomph.setup.ui=/home/rca/.p2/pool
-org.eclipse.oomph.setup.ui\:agent=/home/rca/.p2
