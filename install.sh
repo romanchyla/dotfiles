@@ -36,3 +36,6 @@ for name in *; do
     esac
   fi
 done
+
+echo "Provisioning..."
+~/.provision.secret/run-install.py

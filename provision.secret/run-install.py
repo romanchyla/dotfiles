@@ -1,34 +1,16 @@
-#!/usr/bin/env python
-
-import os
-import sys
-
-os.chdir('%s/.provision.secret' % os.environ.get("HOME"))
-targets = os.listdir('.')
-
-if 'last_run' in targets:
-    last_run = int(open(targets['last_run'], 'r').read())
-    del targets['last_run']
-else:
-    last_run = -1
-
-for t in sorted(targets):
-    try:
-        n = int(t.split('_')[0])
-    except:
-        continue
-    if n < last_run:
-        continue
-    print('executing', t)
-    if t.endswith('.sh'):
-        assert(os.system('bash %s' % t) == 0)
-    elif t.endswith('.py'):
-        assert(os.system('python %s' % t) == 0)
-    else:
-        print ('unknown target', t)
-    last_run = n
-
-with open('last_run', 'w') as f:
-    f.write(str(last_run))
-
-print('Done installation')
+U2FsdGVkX194FrRUlQAAAF+VclhEtsY54YihyjhRjQORtlfx9gPhJ4GosYCRlfiz
+TeY17Jjg6y8D3zQSbgEQnlKeKLlLKGEo2GTM1pvGzHE9vtO+RR0KMmhFwSpztUxa
+AI1RWCxlFhJ95pwR/kSbPPrDFAYAGGIaLm8OkpsRcoN9Af6W/yo7uGYDU5h/Tkq6
+SMlR+dCYcA/9Ir2vXS9iM8jO5n24w7BSabN9HxEZckVVwTcirnAmYquLVdKGfAON
+fXGKYhxNtqwIBgDj34Xjvt+wBT6f05E8/cN8y7h2DQIoDbALDnQctmkB4lxCN+jk
+t018OnfsSxNpn5NK15JD7ejT8CFshka2Ablp6ay575o0ngPNhEToPOPLVEUYCpKO
+aq0lWRhoStCw/r3M95edzT+1HdsYoRezXndAk+sGa/wuNFVljovYsDNPo1Yalg4O
+f4tEH8RzLD0yoinA9gShRhAH0hIqmk3tQj6wbiDt8FRIDCmxn+sKrjpuLxk9d/do
+gzVq6kBWttk57sn1v7OYsCvoKLjgtk5UAB4S3ZIByynf2HVaMVlSBVb8DqXNcdO+
+y/LICI5tQ5AjHOa0yva6+kcHJnMfxc8FSaWWenVVXoBbNc/YVPGsxGI1TbYGNxN4
+rPuZ9MfXad8tPMBkFHsfTPa0bcfLhJaSi/qlWWYBQyvSioz32lxjrKKNl8eVphmR
+Y1SsslyAJ40qmhp5X3shL+2VOUwr35rJghEPxjdadcE/7Y35OtmZpU888BrF7JSy
+0Qi2eVehaMMIYBJn8BHKpnv77HPAtN8deglKUIglZy+Oneg5BXJPfJHkwd/5XxZZ
+CRc9BxAc0F4SI3lk7Jya28UGh8OA0kXAj06+/e8PVHqu3qUma1jvZw4wFO3YE5oL
+AnQzgD14gqO7k4+UEUNw+OuXUBP3ktkS+ZfauOiABWenq3sGpzAilIa+xrBaBqNf
+OaSIaMx461WJ99vuAVhiFqM6XbE1zUEKVmQgb4v3gfx/E3PHVGX+tlbjDiznODtT
