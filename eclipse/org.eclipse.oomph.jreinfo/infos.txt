@@ -1,0 +1,6 @@
+/usr/lib/jvm/java-7-oracle:1:7:0:64:true:1436194863000
+/usr/lib/jvm/java-8-oracle:1:8:0:64:true:1451534092000
+/usr/lib/jvm/java-6-openjdk-amd64:1:6:0:64:true:1448414807000
+/usr/lib/jvm/java-8-oracle/jre:1:8:0:64:false:1451534092000
+/usr/lib/jvm/java-6-sun-1.6.0.26:1:6:0:64:false:1304498606000
+/usr/lib/jvm/java-7-openjdk-amd64:1:7:0:64:true:1447929595000

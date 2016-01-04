@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:LocationCatalog
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0">
+  <installation>
+    <key href="file:/dvt/eclipse-java/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+    <value href="file:/home/rca/workspace/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+  </installation>
+  <installation>
+    <key href="file:/dvt/eclipse-cpp-latest/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+    <value href="file:/home/rca/workspace2/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+  </installation>
+  <installation>
+    <key href="file:/dvt/eclipse-standard/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+    <value href="file:/home/rca/workspace/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+  </installation>
+  <installation>
+    <key href="file:/dvt/eclipse450/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+    <value href="file:/dvt/workspace450/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+  </installation>
+  <workspace>
+    <key href="file:/home/rca/workspace/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/dvt/eclipse-java/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+    <value href="file:/dvt/eclipse-standard/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/home/rca/workspace2/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/dvt/eclipse-cpp-latest/eclipse/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+  <workspace>
+    <key href="file:/dvt/workspace450/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup#/"/>
+    <value href="file:/dvt/eclipse450/configuration/org.eclipse.oomph.setup/installation.setup#/"/>
+  </workspace>
+</setup:LocationCatalog>
