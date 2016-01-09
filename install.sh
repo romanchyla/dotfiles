@@ -5,14 +5,29 @@
 
 UNAME=$(uname)
 
-for name in *; do
-  if [ ! $name == "README.md" -a ! $name == "install.sh" -a ! $name == "bootstrap.sh" ]; then
-    target="$name"
-    if [ ! $name == "nvim" -a ! $name == "bin"  ]; then
-        target=".$name"
-    fi
-    target="$HOME/$target"
+for namespace in '.' '.config'; do
+  echo "namespace $namespace"
+  for name in `ls $namespace`; do
+    name=`basename $name`
 
+    if [ $name == "README.md" -o $name == "install.sh" -o $name == "bootstrap.sh" -o $name == ".config" ]; then
+      continue
+    fi
+
+
+    if [ "$namespace" == "." ]; then 
+      if [ ! $name == "nvim" -a ! $name == "bin"  ]; then
+        target=".$name"
+      else
+        target="$name"
+      fi
+      target="$HOME/$target"
+    else
+      target="$HOME/$namespace/$name"
+    fi
+
+    #echo "target=$target name=$name"
+    
     if [ -f $target ]; then
       cp -f $target $target.bkup
       rm $target
@@ -26,16 +41,18 @@ for name in *; do
 
     case $UNAME in
         CYGWIN* | MINGW32*)
-            cp -R "$PWD/$name" "$target"
-            echo "Copied $PWD/$name to $target."
+            cp -R "$PWD/$namespace/$name" "$target"
+            echo "Copied $PWD/$namespace/$name to $target."
             ;;
         *)
-            ln -s "$PWD/$name" "$target"
-            echo "Linked $PWD/$name to $target."
+            ln -s "$PWD/$namespace/$name" "$target"
+            echo "Linked $PWD/$namespace/$name to $target."
             ;;
     esac
-  fi
+  
+  done
 done
+
 
 echo "Provisioning..."
 ~/.provision.secret/run-install.py

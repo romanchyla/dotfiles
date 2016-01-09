@@ -7,4 +7,4 @@ git config --local filter.openssl.clean "$CWD/gitencrypt/clean_filter_openssl"
 git config --local diff.openssl.textconv "$CWD/gitencrypt/diff_filter_openssl"
 git config --local merge.renormalize true
 
-echo "Dont forget to create ~/.ssh/dotphrase with the password"
+echo "Dont forget to create ~/.ssh/dotphrase with the password (and run git reset --hard HEAD)"

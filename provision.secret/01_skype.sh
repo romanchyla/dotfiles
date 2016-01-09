@@ -1,5 +1,1 @@
-#!/bin/bash
-
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-sudo apt-get update
-sudo apt-get install skype
+U2FsdGVkX194FrRUlQAAAH8Tc8dUZf62VuMOLOc4O1M=
