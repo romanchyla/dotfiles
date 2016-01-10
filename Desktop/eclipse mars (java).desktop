@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=/dvt/eclipse-mars/eclipse/icon.xpm
+Name[en_US]=eclipse mars (java)
+Exec=/dvt/eclipse-mars/eclipse/eclipse
+Name=eclipse mars (java)
+Icon=/dvt/eclipse-mars/eclipse/icon.xpm

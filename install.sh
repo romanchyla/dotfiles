@@ -16,7 +16,7 @@ for namespace in '.' '.config'; do
 
 
     if [ "$namespace" == "." ]; then 
-      if [ ! $name == "nvim" -a ! $name == "bin"  ]; then
+      if [ ! $name == "nvim" -a ! $name == "bin" -a ! $name == "Desktop" ]; then
         target=".$name"
       else
         target="$name"

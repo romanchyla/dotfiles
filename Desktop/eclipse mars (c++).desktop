@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=/dvt/eclipse-mars-cpp/eclipse/icon.xpm
+Name[en_US]=eclipse mars (c++)
+Exec=/dvt/eclipse-mars-cpp/eclipse/eclipse
+Name=eclipse mars (cpp)
+Icon=/dvt/eclipse-mars-cpp/eclipse/icon.xpm
