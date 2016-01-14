@@ -12,6 +12,6 @@ else
   action='installIUs'
 fi
 
-./eclipse -nosplash -application org.eclipse.equinox.p2.director -repository  "$repository" -${action} "201510052309.PyDev"
+./eclipse -nosplash -application org.eclipse.equinox.p2.director -repository  "$repository" -${action} "org.python.pydev.feature.feature.group,org.python.pydev.mylyn.feature.feature.group"
 
 popd
