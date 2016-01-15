@@ -5,7 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
     name="rca"
-    questionnaireDate="2016-01-05T17:37:50.150-0500">
+    questionnaireDate="2016-01-15T18:15:46.138-0500">
   <setupTask
       xsi:type="setup:CompoundTask"
       name="User Preferences">
@@ -118,7 +118,7 @@
       <setupTask
           xsi:type="setup:PreferenceTask"
           key="/instance/org.eclipse.ui.workbench/RUN_IN_BACKGROUND"
-          value="false"/>
+          value="true"/>
     </setupTask>
   </setupTask>
   <acceptedLicense>6a3d083ad2bd7d3a80ee293235f8c5b1 Eclipse Foundation Software User Agreement</acceptedLicense>
