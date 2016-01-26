@@ -33,3 +33,13 @@ alias restart-wifi="echo \"sudo kill -9 `pidof NetworkManager`\"; sudo kill -9 `
 alias svim='screen -c ~/.vimscreen'
 alias slua='screen -c ~/.luascreen.secret'
 alias swork='screen -c ~/.workscreen.secret'
+
+function search_replace() {
+	folder=${3:-`pwd`}
+	read -p "Recursive '$1' -> '$2' in $folder? [y]:" answer
+  if [ "${answer:-y}" == "y" ]; then
+    echo "find $folder -type f -print0 | xargs -0 sed -i \"s/$1/$2/g\""
+		find $folder -type f -print0 | xargs -0 sed -i "s/$1/$2/g"
+  fi
+}
+alias sr=search_replace
