@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ "`hostname | grep 'argo'`" == "" ]; then
+	# necessary to get the values
+	unset XDG_CONFIG_HOME
+fi
