@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# necessary to get the values
-unset XDG_CONFIG_HOME
-
-pushd ~/dotfiles/provision.secret/dconf
-gsettings list-recursively > dconf.dump
-popd
+source ./dconf.setup
+h=`hostname -s`
+gsettings list-recursively > "dconf.dump.$h"
+sort "dconf.dump.$h" -o "dconf.dump.$h"
