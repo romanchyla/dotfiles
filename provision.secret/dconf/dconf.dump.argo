@@ -97,7 +97,7 @@ com.canonical.Unity.Lenses home-lens-default-view ['applications.scope', 'files.
 com.canonical.Unity.Lenses home-lens-priority ['files.scope', 'music.scope']
 com.canonical.Unity.Lenses locked-scopes @as []
 com.canonical.Unity.Lenses remote-content-search 'all'
-com.canonical.Unity minimize-count 9
+com.canonical.Unity minimize-count 10
 com.canonical.Unity minimize-fast-duration 300
 com.canonical.Unity minimize-slow-duration 800
 com.canonical.Unity minimize-speed-threshold 100
@@ -121,7 +121,7 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-time 1454331442
+com.ubuntu.update-manager launch-time 1454504714
 com.ubuntu.update-manager show-details true
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -871,8 +871,8 @@ org.gnome.Evince.Default sidebar-size 132
 org.gnome.Evince.Default sidebar-size 132
 org.gnome.Evince.Default sizing-mode 'fit-width'
 org.gnome.Evince.Default sizing-mode 'fit-width'
-org.gnome.Evince.Default window-ratio (0.0, 0.0)
-org.gnome.Evince.Default window-ratio (0.0, 0.0)
+org.gnome.Evince.Default window-ratio (2.4248366013071894, 1.297979797979798)
+org.gnome.Evince.Default window-ratio (2.4248366013071894, 1.297979797979798)
 org.gnome.Evince.Default zoom 1.0
 org.gnome.Evince.Default zoom 1.0
 org.gnome.Evince document-directory @ms nothing
@@ -2051,7 +2051,7 @@ org.gtk.Settings.FileChooser sidebar-width 148
 org.gtk.Settings.FileChooser sort-column 'name'
 org.gtk.Settings.FileChooser sort-order 'ascending'
 org.gtk.Settings.FileChooser startup-mode 'cwd'
-org.gtk.Settings.FileChooser window-position (2559, 166)
+org.gtk.Settings.FileChooser window-position (1920, 24)
 org.gtk.Settings.FileChooser window-size (910, 813)
 org.onboard.auto-show enabled false
 org.onboard.auto-show enabled false

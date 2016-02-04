@@ -11,4 +11,4 @@ tabs-to-spaces@1.0.1
 term@0.2.4
 term3@0.21.0
 vim-mode@0.64.0
-
+atom-ternjs@0.12.2
