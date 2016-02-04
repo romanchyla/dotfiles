@@ -121,7 +121,7 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-time 1454504714
+com.ubuntu.update-manager launch-time 1454589674
 com.ubuntu.update-manager show-details true
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
