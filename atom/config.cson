@@ -29,6 +29,11 @@
   linter:
     ignoreVCSIgnoredFiles: false
     showErrorPanel: false
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "$HOME/.eslintrc"
+    globalNodePath: "/usr"
+    useGlobalEslint: true
   "linter-lua": {}
   "linter-pep8":
     maxLineLength: 100
@@ -36,6 +41,8 @@
     ignoreErrorsAndWarnings: "D103,D401,W0612"
     usePylint: true
   "linter-pylint": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode":
     startInInsertMode: true
     useClipboardAsDefaultRegister: true

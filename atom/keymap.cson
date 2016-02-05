@@ -16,3 +16,5 @@
   'ctrl-<': 'settings-view:show-keybindings'
 'body':
   'ctrl-w': 'pane:close'
+'body':
+  'ctrl-w': 'unset!'  
