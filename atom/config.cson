@@ -28,7 +28,6 @@
     userId: "d1097b79-5d80-4ef8-d849-fb1769625930"
   linter:
     ignoreVCSIgnoredFiles: false
-    showErrorPanel: false
   "linter-eslint":
     disableWhenNoEslintConfig: false
     eslintrcPath: "$HOME/.eslintrc"
