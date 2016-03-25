@@ -5,6 +5,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=/dvt/eclipse-mars/eclipse/icon.xpm
 Name[en_US]=eclipse mars (java)
-Exec=~/bin/eclipse.sh
+Exec=bash -c "~/bin/eclipse.sh"
 Name=eclipse mars (java)
 Icon=/dvt/eclipse-mars/eclipse/icon.xpm
