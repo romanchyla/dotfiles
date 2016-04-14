@@ -208,7 +208,7 @@ function checkport() {
 function work-tunnel() {
   local_port=${1}
   target_machine=${2:-adsx.cfa.harvard.edu:${1}}
-  gateway_machine=${3:-rchyla@pogo3.cfa.harvard.edu}
+  gateway_machine=${3:-rchyla@pogo5.cfa.harvard.edu}
   checkport $local_port
   echo "ssh -N -f -L $local_port:$target_machine $gateway_machine"
   ssh -N -f -L $local_port:$target_machine $gateway_machine

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo ibus restart
+ibus restart
