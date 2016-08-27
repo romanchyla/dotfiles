@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=/dvt/eclipse-neon/eclipse/icon.xpm
+Name[en_US]=eclipse neon (java)
+Exec=/dvt/eclipse-neon/eclipse/eclipse
+Name=eclipse neon (java)
+Icon=/dvt/eclipse-neon/eclipse/icon.xpm
