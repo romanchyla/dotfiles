@@ -4,6 +4,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=/dvt/eclipse-neon/eclipse/icon.xpm
 Name[en_US]=eclipse neon (java)
-Exec=/dvt/eclipse-neon/eclipse/eclipse
+Exec=/home/rchyla/bin/eclipse.sh
 Name=eclipse neon (java)
 Icon=/dvt/eclipse-neon/eclipse/icon.xpm
