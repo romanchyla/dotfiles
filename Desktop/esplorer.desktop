@@ -5,6 +5,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=
 Name[en_US]=ESPlorer
-Exec=/dvt/ESPlorer/esplorer.sh
+Exec=/home/rchyla/bin/esplorer.sh
 Name=ESPlorer
 Icon=
