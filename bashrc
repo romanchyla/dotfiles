@@ -334,3 +334,7 @@ fi
 unset MANPATH # for for .fzf
 
 [ -f ~/.localenv ] && source ~/.localenv
+
+
+[ -f ~/.tmux/.tmuxrc ] && source ~/.tmux/.tmuxrc
+
