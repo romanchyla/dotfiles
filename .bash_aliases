@@ -1,3 +1,10 @@
+# this file gets imported by default .bashrc; we take advantage of it
+# to branch out and call other customizations - overriding/customizing
+# the default settings
+
+test -r ~/.bash_customizations . ~/.bash_customizations
+
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -43,3 +50,38 @@ function search_replace() {
   fi
 }
 alias sr=search_replace
+
+
+function killport() {
+  sudo kill $(fuser -n tcp $1 2> /dev/null)
+}
+function checkport() {
+  a=("$@")
+  for i in "${a[@]}" ; do
+    p=`fuser -n tcp $i 2> /dev/null`
+    if [ "$p" != "" ]; then
+      read -e -p "Do you want to kill the process runnning on port $i ($p)?: " -i "y" answer
+      if [ "${answer:-y}" == "y" ]; then
+        killport $i
+      fi
+    fi
+  done
+}
+
+#ssh -N -f -L 3307:adsx.cfa.harvard.edu:3306 rchyla@pogo3.cfa.harvard.edu
+function work-tunnel() {
+  local_port=${1}
+  target_machine=${2:-adsx.cfa.harvard.edu:${1}}
+  gateway_machine=${3:-rchyla@pogo5.cfa.harvard.edu}
+  checkport $local_port
+  echo "ssh -N -f -L $local_port:$target_machine $gateway_machine"
+  ssh -N -f -L $local_port:$target_machine $gateway_machine
+}
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases.secret ]; then
+    . ~/.bash_aliases.secret
+fi

@@ -1,179 +1,67 @@
-#!/bin/bash
-#
-# Mitchell Hashimoto's bash environment
-# Much taken from Ryan Tomayko (thanks!)
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
 
-# Basics
-: ${HOME=~}
-: ${LOGNAME=$(id -un)}
-: ${UNAME=$(uname)}
-
-# Complete hostnames from this file
-: ${HOSTFILE=~/.ssh/known_hosts}
-
-#-------------------------------------------------------------------------------
-# Shell Options
-#-------------------------------------------------------------------------------
-
-# System bashrc
-test -r /etc/bash.bashrc && . /etc/bash.bashrc
-
-# Notify bg task completion immediately
-set -o notify
-
-# Fucking mail notifications
-unset MAILCHECK
-
-# default umask
-umask 0022
-
-# Terminal type
-case $UNAME in
-    CYGWIN* | MINGW32*)
-        export TERM=cygwin
-        ;;
-    *)
-        export TERM=xterm-256color
-        ;;
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
 esac
 
-#-------------------------------------------------------------------------------
-# Path
-#-------------------------------------------------------------------------------
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
-case $UNAME in
-    MINGW32*)
-        # Don't touch the default PATH, it inherits Windows.
-        ;;
-    *)
-        # Various sbins
-        PATH="/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"
-        PATH="/usr/local/bin:$PATH"
-        ;;
-esac
-
-# OS-Specific path stuff
-if [[ `uname` == "Darwin" ]]; then
-    alias emacs="/usr/local/Cellar/emacs/23.3/Emacs.app/Contents/MacOS/Emacs -nw"
-elif [[ `uname` == "Linux" ]]; then
-    PATH="/usr/bin/perlbin/vendor:$PATH"
-fi
-
-# ~/bin if it exists
-test -d "$HOME/bin" &&
-PATH="$HOME/bin:$PATH"
-
-# texbin if it exists for LaTeX stuff
-test -d "/usr/texbin" &&
-PATH="/usr/texbin:$PATH"
-
-# Heroku toolbelt
-test -d "/usr/local/heroku/bin" &&
-PATH="/usr/local/heroku/bin:$PATH"
-
-#-------------------------------------------------------------------------------
-# Env. Configuration
-#-------------------------------------------------------------------------------
-
-# detect interactive shell
-case "$-" in
-    *i*) INTERACTIVE=yes ;;
-    *)   unset INTERACTIVE ;;
-esac
-
-# detect login shell
-case "$0" in
-    -*) LOGIN=yes ;;
-    *)  unset LOGIN ;;
-esac
-
-# Proper locale
-: ${LANG:="en_US.UTF-8"}
-: ${LANGUAGE:="en"}
-: ${LC_CTYPE:="en_US.UTF-8"}
-: ${LC_ALL:="en_US.UTF-8"}
-export LANG LANGUAGE LC_CTYPE LC_ALL
-
-# Always use passive mode FTP
-: ${FTP_PASSIVE:=1}
-export FTP_PASSIVE
-
-# Ignore backups, CVS directories
-FIGNORE="~:CVS:#:.pyc"
-HISTCONTROL=ignoredups:ignorespace
 # append to the history file, don't overwrite it
 shopt -s histappend
-# reedit a history substitution line if it failed
-shopt -s histreedit
-# edit a recalled hisotry line before executing
-shopt -s histverify
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check window size after each command and update if
-# necessary (values of LINES and COLUMNS)
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# XDG config
-export XDG_CONFIG_HOME="$HOME"
-
-#-------------------------------------------------------------------------------
-# Editor and Pager
-#-------------------------------------------------------------------------------
-EDITOR="vim"
-export EDITOR
-
-PAGER="less -FirSwX"
-MANPAGER="$PAGER"
-export PAGER MANPAGER
-
-#-------------------------------------------------------------------------------
-# Prompt
-#-------------------------------------------------------------------------------
-export LS_OPTIONS='--color=auto'
-eval "`dircolors`"
-
-RED="\[\033[0;31m\]"
-BROWN="\[\033[0;33m\]"
-GREY="\[\033[0;97m\]"
-GREEN="\[\033[0;32m\]"
-BLUE="\[\033[0;34m\]"
-PS_CLEAR="\[\033[0m\]"
-SCREEN_ESC="\[\033k\033\134\]"
-
-COLOR1="${BLUE}"
-COLOR2="${BLUE}"
-P="\$"
-
-prompt_simple() {
-    unset PROMPT_COMMAND
-    PS1="\W\$(parse_git_branch) → "
-    PS2="> "
-}
-
-prompt_compact() {
-    unset PROMPT_COMMAND
-    PS1="${COLOR1}${P}${PS_CLEAR} "
-    PS2="> "
-}
-
-prompt_color() {
-    PS1="${GREEN}\W\$(parse_git_branch) → ${PS_CLEAR}"
-    PS2="${GREY}>${PS_CLEAR} "
-}
-
-parse_git_branch() {
-    [ -d .git ] || return 1
-    git symbolic-ref HEAD 2> /dev/null | sed 's#\(.*\)\/\([^\/]*\)$# \2#'
-}
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
+    else
+	color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -184,131 +72,38 @@ xterm*|rxvt*)
     ;;
 esac
 
-#-------------------------------------------------------------------------------
-# Aliases / Functions
-#-------------------------------------------------------------------------------
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-function killport() {
-  sudo kill $(fuser -n tcp $1 2> /dev/null)
-}
-function checkport() {
-  a=("$@")
-  for i in "${a[@]}" ; do
-    p=`fuser -n tcp $i 2> /dev/null`
-    if [ "$p" != "" ]; then
-      read -e -p "Do you want to kill the process runnning on port $i ($p)?: " -i "y" answer
-      if [ "${answer:-y}" == "y" ]; then
-        killport $i
-      fi
-    fi
-  done
-}
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
-#ssh -N -f -L 3307:adsx.cfa.harvard.edu:3306 rchyla@pogo3.cfa.harvard.edu
-function work-tunnel() {
-  local_port=${1}
-  target_machine=${2:-adsx.cfa.harvard.edu:${1}}
-  gateway_machine=${3:-rchyla@pogo5.cfa.harvard.edu}
-  checkport $local_port
-  echo "ssh -N -f -L $local_port:$target_machine $gateway_machine"
-  ssh -N -f -L $local_port:$target_machine $gateway_machine
-}
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-if [ -f ~/.bash_aliases.secret ]; then
-    . ~/.bash_aliases.secret
-fi
-
-
-# Usage: puniq [path]
-# Remove duplicate entries from a PATH style value while
-# retaining the original order.
-puniq() {
-    echo "$1" |tr : '\n' |nl |sort -u -k 2,2 |sort -n |
-    cut -f 2- |tr '\n' : |sed -e 's/:$//' -e 's/^://'
-}
-
-#-------------------------------------------------------------------------------
-# SSH Agent
-#-------------------------------------------------------------------------------
-SSH_ENV=$HOME/.ssh/environment
-
-function start_ssh_agent {
-     ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
-     chmod 0600 ${SSH_ENV}
-     . ${SSH_ENV} > /dev/null
-
-     ssh-add
-
-}
-
-# Source SSH agent settings if it is already running, otherwise start
-# up the agent proprely.
-if [ -f "${SSH_ENV}" ]; then
-     . ${SSH_ENV} > /dev/null
-
-     # Check for broken SSH socket
-     if [ ! -S "${SSH_AUTH_SOCK}" -o ! -w "${SSH_AUTH_SOCK}" ]; then
-         echo "Removing ~/.ssh/environment as socket is broken"
-	 rm ${SSH_ENV}
-         start_ssh_agent
-     fi
-
-
-     # ps ${SSH_AGENT_PID} doesn't work under cywgin
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-         start_ssh_agent
-     }
-else
-     start_ssh_agent
-fi
-
-#-------------------------------------------------------------------------------
-# Other
-#-------------------------------------------------------------------------------
-# Plugins
-PLUGINS=( "depot_tools" "git" "java" "tmux" "windows" )
-
-for plugin in "${PLUGINS[@]}"
-do
-  plugin_path="$HOME/.bash.d/${plugin}"
-  test -f $plugin_path && source $plugin_path
-done
-
-#-------------------------------------------------------------------------------
-# User Shell Environment
-#-------------------------------------------------------------------------------
-case $UNAME in
-    MINGW32*)
-        # Don't condense path, since function doesn't work here.
-        ;;
-    *)
-        # Condense path variables
-        PATH=$(puniq $PATH)
-        MANPATH=$(puniq $MANPATH)
-        ;;
-esac
-
-# Set default prompt if interactive
-test -n "$PS1" &&
-prompt_color
-
-if [ -f "$HOME/.rvm/scripts/rvm" ]; then
-    source $HOME/.rvm/scripts/rvm
-fi
-
-# Always put /usr/local/bin first.
-case $UNAME in
-    MINGW32*)
-        ;;
-    *)
-        # Various sbins
-        PATH="/usr/local/bin:/usr/bin:$PATH"
-        ;;
-esac
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -320,21 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# prevent ctrl-d logouts
-export ignoreeof=3
-
-# Make C-S pass to the app
-if [ -t 1 ]; then
-  bind -r '\C-s'
-  stty -ixon 2> /dev/null
-fi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-unset MANPATH # for for .fzf
-
-[ -f ~/.localenv ] && source ~/.localenv
-
-
-[ -f ~/.tmux/.tmuxrc ] && source ~/.tmux/.tmuxrc
-
