@@ -2,8 +2,12 @@
 # to branch out and call other customizations - overriding/customizing
 # the default settings
 
-test -r ~/.bash_customizations . ~/.bash_customizations
+test -r ~/.bash_customizations && . ~/.bash_customizations
 
+
+if [ -f ~/.bash_aliases.secret ]; then
+    . ~/.bash_aliases.secret
+fi
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -30,9 +34,7 @@ alias gp='git push'
 alias gs='git status'
 alias gt='git tag'
 
-# Others
-alias be='bundle exec'
-alias v='vagrant'
+
 alias ox='xdg-open'
 alias webstorm-fix-keyboard="sudo ibus restart"
 alias restart-wifi="echo \"sudo kill -9 `pidof NetworkManager`\"; sudo kill -9 `pidof NetworkManager`"
@@ -68,20 +70,5 @@ function checkport() {
   done
 }
 
-#ssh -N -f -L 3307:adsx.cfa.harvard.edu:3306 rchyla@pogo3.cfa.harvard.edu
-function work-tunnel() {
-  local_port=${1}
-  target_machine=${2:-adsx.cfa.harvard.edu:${1}}
-  gateway_machine=${3:-rchyla@pogo5.cfa.harvard.edu}
-  checkport $local_port
-  echo "ssh -N -f -L $local_port:$target_machine $gateway_machine"
-  ssh -N -f -L $local_port:$target_machine $gateway_machine
-}
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
-if [ -f ~/.bash_aliases.secret ]; then
-    . ~/.bash_aliases.secret
-fi
