@@ -197,3 +197,44 @@ fi
 [ -f ~/.localenv ] && source ~/.localenv
 [ -f ~/.tmux/.tmuxrc ] && source ~/.tmux/.tmuxrc
 
+
+
+# -------------------------------------------------------------------
+#    some cool functions
+# -------------------------------------------------------------------
+
+welcome() {
+    echo -e "\nWelcome $USER\n"; cal ;
+    echo -e ""
+    echo -ne "Up time:";uptime | awk /'up/'
+    echo -en "\nExternal IP Address :\n" 
+    echo -e `myip`
+    echo -e "\nInternal IP Address:"; echo -e "`ip addr | grep inet | grep scope | grep -v inet6| grep -v '127.0.0.1' | sed 's/\/..$//'`"
+    echo 
+}
+welcome;
+
+# get current host related info
+ii () {
+    echo -e "\nYou are logged as $USER on " `hostname`
+    echo -ne "Today is "; date #date +"Today is %A %D, and it is now %R"
+    echo -e "\nAdditionnal information:" ; uname -a
+    echo -e "\nUsers logged on: " ; w -h
+    echo -e "\nCurrent date : " ; date
+    echo -e "\nMachine stats : " ; uptime
+    echo -e "\nMemory stats : " ; free
+    echo -en "\nExternal IP Address :\n" 
+    echo -e `myip`
+    echo -e "\nInternal IP Address:"; echo -e "`ip addr | grep inet | grep scope | grep -v inet6| grep -v '127.0.0.1' | sed 's/\/..$//'`"
+    echo 
+}
+
+  
+
+upinfo () {
+echo -ne "${green}$HOSTNAME ${red}uptime is ${cyan} \t ";uptime | awk /'up/ {print $3,$4,$5,$6,$7,$8,$9,$10}'
+}
+
+#every command puts a line in my ~/.bash_eternal_history
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo `dt` `pwd` $$ $USER \
+               "$(history 1)" >> ~/.bash_eternal_history'

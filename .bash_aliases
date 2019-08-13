@@ -43,6 +43,12 @@ alias svim='screen -c ~/.vimscreen'
 alias slua='screen -c ~/.luascreen.secret'
 alias swork='screen -c ~/.workscreen.secret'
 
+alias reload='source ~/.bashrc'
+alias biggest='BLOCKSIZE=1048576; du -x | sort -nr | head -10'
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+alias dt='date "+%F %T"'
+
 function search_replace() {
 	folder=${3:-`pwd`}
 	read -p "Recursive '$1' -> '$2' in $folder? [y]:" answer
@@ -70,5 +76,25 @@ function checkport() {
   done
 }
 
-
+# Easy extract
+extract () {
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2)   tar xvjf $1    ;;
+          *.tar.gz)    tar xvzf $1    ;;
+          *.bz2)       bunzip2 $1     ;;
+          *.rar)       rar x $1       ;;
+          *.gz)        gunzip $1      ;;
+          *.tar)       tar xvf $1     ;;
+          *.tbz2)      tar xvjf $1    ;;
+          *.tgz)       tar xvzf $1    ;;
+          *.zip)       unzip $1       ;;
+          *.Z)         uncompress $1  ;;
+          *.7z)        7z x $1        ;;
+          *)           echo "don't know how to extract '$1'..." ;;
+      esac
+  else
+      echo "'$1' is not a valid file!"
+  fi
+}
 
