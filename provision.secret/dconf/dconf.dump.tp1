@@ -117,7 +117,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel ''
+org.gnome.ControlCenter last-panel 'power'
 org.gnome.crypto.cache gpg-cache-method 'session'
 org.gnome.crypto.cache gpg-cache-ttl 300
 org.gnome.crypto.pgp ascii-armor true
@@ -235,7 +235,7 @@ org.gnome.desktop.background picture-options 'zoom'
 org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/warty-final-ubuntu.png'
 org.gnome.desktop.background primary-color '#023c88'
 org.gnome.desktop.background secondary-color '#5789ca'
-org.gnome.desktop.background show-desktop-icons true
+org.gnome.desktop.background show-desktop-icons false
 org.gnome.desktop.calendar show-weekdate false
 org.gnome.desktop.datetime automatic-timezone false
 org.gnome.desktop.default-applications.office.calendar exec 'evolution -c calendar'
@@ -261,10 +261,10 @@ org.gnome.desktop.interface cursor-blink-time 1200
 org.gnome.desktop.interface cursor-blink-timeout 10
 org.gnome.desktop.interface cursor-blink true
 org.gnome.desktop.interface cursor-size 24
-org.gnome.desktop.interface cursor-theme 'DMZ-White'
+org.gnome.desktop.interface cursor-theme 'Adwaita'
 org.gnome.desktop.interface document-font-name 'Sans 11'
 org.gnome.desktop.interface enable-animations true
-org.gnome.desktop.interface font-name 'Ubuntu 11'
+org.gnome.desktop.interface font-name 'Cantarell 11'
 org.gnome.desktop.interface gtk-color-palette 'black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90'
 org.gnome.desktop.interface gtk-color-scheme ''
 org.gnome.desktop.interface gtk-enable-primary-paste true
@@ -272,15 +272,15 @@ org.gnome.desktop.interface gtk-im-module 'gtk-im-context-simple'
 org.gnome.desktop.interface gtk-im-preedit-style 'callback'
 org.gnome.desktop.interface gtk-im-status-style 'callback'
 org.gnome.desktop.interface gtk-key-theme 'Default'
-org.gnome.desktop.interface gtk-theme 'Ambiance'
+org.gnome.desktop.interface gtk-theme 'Adwaita'
 org.gnome.desktop.interface gtk-timeout-initial 200
 org.gnome.desktop.interface gtk-timeout-repeat 20
-org.gnome.desktop.interface icon-theme 'ubuntu-mono-dark'
+org.gnome.desktop.interface icon-theme 'Adwaita'
 org.gnome.desktop.interface menubar-accel 'F10'
 org.gnome.desktop.interface menubar-detachable false
 org.gnome.desktop.interface menus-have-icons false
 org.gnome.desktop.interface menus-have-tearoff false
-org.gnome.desktop.interface monospace-font-name 'Ubuntu Mono 13'
+org.gnome.desktop.interface monospace-font-name 'Monospace 11'
 org.gnome.desktop.interface scaling-factor uint32 0
 org.gnome.desktop.interface show-battery-percentage false
 org.gnome.desktop.interface show-input-method-menu true
@@ -329,7 +329,7 @@ org.gnome.desktop.peripherals.touchpad scroll-method 'two-finger-scrolling'
 org.gnome.desktop.peripherals.touchpad send-events 'enabled'
 org.gnome.desktop.peripherals.touchpad speed 0.0
 org.gnome.desktop.peripherals.touchpad tap-and-drag true
-org.gnome.desktop.peripherals.touchpad tap-to-click true
+org.gnome.desktop.peripherals.touchpad tap-to-click false
 org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
 org.gnome.desktop.peripherals.touchscreen display ['', '', '']
 org.gnome.desktop.peripherals.trackball accel-profile 'default'
@@ -428,7 +428,7 @@ org.gnome.desktop.wm.keybindings panel-run-dialog ['<Alt>F2']
 org.gnome.desktop.wm.keybindings raise @as []
 org.gnome.desktop.wm.keybindings raise-or-lower @as []
 org.gnome.desktop.wm.keybindings set-spew-mark @as []
-org.gnome.desktop.wm.keybindings show-desktop ['<Primary><Super>d', '<Primary><Alt>d', '<Super>d']
+org.gnome.desktop.wm.keybindings show-desktop @as []
 org.gnome.desktop.wm.keybindings switch-applications-backward ['<Shift><Super>Tab', '<Shift><Alt>Tab']
 org.gnome.desktop.wm.keybindings switch-applications ['<Super>Tab', '<Alt>Tab']
 org.gnome.desktop.wm.keybindings switch-group-backward ['<Shift><Super>Above_Tab', '<Shift><Alt>Above_Tab']
@@ -463,12 +463,12 @@ org.gnome.desktop.wm.keybindings toggle-on-all-workspaces @as []
 org.gnome.desktop.wm.keybindings toggle-shaded @as []
 org.gnome.desktop.wm.keybindings unmaximize ['<Super>Down', '<Alt>F5']
 org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
-org.gnome.desktop.wm.preferences action-middle-click-titlebar 'lower'
+org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
 org.gnome.desktop.wm.preferences action-right-click-titlebar 'menu'
 org.gnome.desktop.wm.preferences audible-bell true
 org.gnome.desktop.wm.preferences auto-raise-delay 500
 org.gnome.desktop.wm.preferences auto-raise false
-org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+org.gnome.desktop.wm.preferences button-layout 'appmenu:close'
 org.gnome.desktop.wm.preferences disable-workarounds false
 org.gnome.desktop.wm.preferences focus-mode 'click'
 org.gnome.desktop.wm.preferences focus-new-windows 'smart'
@@ -477,8 +477,8 @@ org.gnome.desktop.wm.preferences num-workspaces 4
 org.gnome.desktop.wm.preferences raise-on-click true
 org.gnome.desktop.wm.preferences resize-with-right-button false
 org.gnome.desktop.wm.preferences theme 'Adwaita'
-org.gnome.desktop.wm.preferences titlebar-font 'Ubuntu Bold 11'
-org.gnome.desktop.wm.preferences titlebar-uses-system-font false
+org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 11'
+org.gnome.desktop.wm.preferences titlebar-uses-system-font true
 org.gnome.desktop.wm.preferences visual-bell false
 org.gnome.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
 org.gnome.desktop.wm.preferences workspace-names @as []
@@ -495,7 +495,7 @@ org.gnome.eog.ui image-gallery-position 'bottom'
 org.gnome.eog.ui image-gallery-resizable false
 org.gnome.eog.ui propsdialog-netbook-mode true
 org.gnome.eog.ui scroll-buttons true
-org.gnome.eog.ui sidebar false
+org.gnome.eog.ui sidebar true
 org.gnome.eog.ui statusbar false
 org.gnome.eog.view autorotate true
 org.gnome.eog.view background-color '#000000'
@@ -591,7 +591,7 @@ org.gnome.FileRoller.UI sidebar-width 200
 org.gnome.FileRoller.UI view-sidebar false
 org.gnome.FileRoller.UI window-height 480
 org.gnome.FileRoller.UI window-width 600
-org.gnome.gedit.plugins active-plugins ['docinfo', 'modelines', 'filebrowser', 'spell', 'time']
+org.gnome.gedit.plugins active-plugins ['filebrowser', 'spell', 'time', 'modelines', 'docinfo']
 org.gnome.gedit.plugins.externaltools font 'Monospace 10'
 org.gnome.gedit.plugins.externaltools use-system-font true
 org.gnome.gedit.plugins.filebrowser binary-patterns ['*.la', '*.lo']
@@ -601,9 +601,9 @@ org.gnome.gedit.plugins.filebrowser filter-pattern ''
 org.gnome.gedit.plugins.filebrowser.nautilus click-policy 'double'
 org.gnome.gedit.plugins.filebrowser.nautilus confirm-trash true
 org.gnome.gedit.plugins.filebrowser open-at-first-doc true
-org.gnome.gedit.plugins.filebrowser root ''
+org.gnome.gedit.plugins.filebrowser root 'file:///'
 org.gnome.gedit.plugins.filebrowser tree-view true
-org.gnome.gedit.plugins.filebrowser virtual-root ''
+org.gnome.gedit.plugins.filebrowser virtual-root 'file:///media/rchyla/KEYDISK/dotfiles'
 org.gnome.gedit.plugins.pythonconsole command-color '#314e6c'
 org.gnome.gedit.plugins.pythonconsole error-color '#990000'
 org.gnome.gedit.plugins.pythonconsole font 'Monospace 10'
@@ -727,14 +727,14 @@ org.gnome.mines ysize 16
 org.gnome.mousetweaks click-type-window-geometry ''
 org.gnome.mousetweaks click-type-window-orientation 'vertical'
 org.gnome.mousetweaks click-type-window-style 'both'
-org.gnome.mutter attach-modal-dialogs true
+org.gnome.mutter attach-modal-dialogs false
 org.gnome.mutter auto-maximize true
 org.gnome.mutter center-new-windows false
 org.gnome.mutter draggable-border-width 10
-org.gnome.mutter dynamic-workspaces true
-org.gnome.mutter edge-tiling true
+org.gnome.mutter dynamic-workspaces false
+org.gnome.mutter edge-tiling false
 org.gnome.mutter experimental-features @as []
-org.gnome.mutter focus-change-on-pointer-rest true
+org.gnome.mutter focus-change-on-pointer-rest false
 org.gnome.mutter.keybindings rotate-monitor ['XF86RotateWindows']
 org.gnome.mutter.keybindings switch-monitor ['<Super>p', 'XF86Display']
 org.gnome.mutter.keybindings tab-popup-cancel @as []
@@ -758,12 +758,12 @@ org.gnome.mutter.wayland.keybindings switch-to-session-8 ['<Primary><Alt>F8']
 org.gnome.mutter.wayland.keybindings switch-to-session-9 ['<Primary><Alt>F9']
 org.gnome.mutter.wayland xwayland-allow-grabs false
 org.gnome.mutter.wayland xwayland-grab-access-rules @as []
-org.gnome.mutter workspaces-only-on-primary true
+org.gnome.mutter workspaces-only-on-primary false
 org.gnome.nautilus.compression default-compression-format 'zip'
 org.gnome.nautilus.desktop background-fade true
 org.gnome.nautilus.desktop font ''
 org.gnome.nautilus.desktop home-icon-name 'Home'
-org.gnome.nautilus.desktop home-icon-visible false
+org.gnome.nautilus.desktop home-icon-visible true
 org.gnome.nautilus.desktop network-icon-name 'Network Servers'
 org.gnome.nautilus.desktop network-icon-visible false
 org.gnome.nautilus.desktop text-ellipsis-limit 3
@@ -771,7 +771,7 @@ org.gnome.nautilus.desktop trash-icon-name 'Trash'
 org.gnome.nautilus.desktop trash-icon-visible true
 org.gnome.nautilus.desktop volumes-visible true
 org.gnome.nautilus.icon-view captions ['none', 'none', 'none']
-org.gnome.nautilus.icon-view default-zoom-level 'small'
+org.gnome.nautilus.icon-view default-zoom-level 'large'
 org.gnome.nautilus.icon-view text-ellipsis-limit ['3']
 org.gnome.nautilus.icon-view thumbnail-size 64
 org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'owner', 'group', 'permissions', 'mime_type', 'where', 'date_modified', 'date_modified_with_time', 'date_accessed']
@@ -791,7 +791,7 @@ org.gnome.nautilus.preferences install-mime-activation true
 org.gnome.nautilus.preferences mouse-back-button 8
 org.gnome.nautilus.preferences mouse-forward-button 9
 org.gnome.nautilus.preferences mouse-use-extra-buttons true
-org.gnome.nautilus.preferences open-folder-on-dnd-hover false
+org.gnome.nautilus.preferences open-folder-on-dnd-hover true
 org.gnome.nautilus.preferences recursive-search 'local-only'
 org.gnome.nautilus.preferences search-filter-time-type 'last_modified'
 org.gnome.nautilus.preferences search-view 'list-view'
@@ -854,7 +854,7 @@ org.gnome.rhythmbox.player play-order 'linear'
 org.gnome.rhythmbox.player transition-time 0.0
 org.gnome.rhythmbox.player use-xfade-backend false
 org.gnome.rhythmbox.player volume 1.0
-org.gnome.rhythmbox.plugins active-plugins ['alternative-toolbar', 'artsearch', 'audiocd', 'audioscrobbler', 'cd-recorder', 'daap', 'dbus-media-server', 'generic-player', 'ipod', 'iradio', 'mmkeys', 'mpris', 'mtpdevice', 'notification', 'power-manager']
+org.gnome.rhythmbox.plugins active-plugins @as []
 org.gnome.rhythmbox.plugins.alternative_toolbar app-menu-display false
 org.gnome.rhythmbox.plugins.alternative_toolbar compact-progressbar false
 org.gnome.rhythmbox.plugins.alternative_toolbar dark-theme false
@@ -899,7 +899,7 @@ org.gnome.rhythmbox position (-1, -1)
 org.gnome.rhythmbox queue-as-sidebar false
 org.gnome.rhythmbox.rhythmdb grace-period 45
 org.gnome.rhythmbox.rhythmdb locations @as []
-org.gnome.rhythmbox.rhythmdb monitor-library true
+org.gnome.rhythmbox.rhythmdb monitor-library false
 org.gnome.rhythmbox right-paned-position 400
 org.gnome.rhythmbox.sharing enable-browsing true
 org.gnome.rhythmbox.sharing enable-sharing false
@@ -987,7 +987,7 @@ org.gnome.settings-daemon.plugins.a11y-keyboard active true
 org.gnome.settings-daemon.plugins.a11y-keyboard priority 0
 org.gnome.settings-daemon.plugins.a11y-settings active true
 org.gnome.settings-daemon.plugins.a11y-settings priority 0
-org.gnome.settings-daemon.plugins.background active false
+org.gnome.settings-daemon.plugins.background active true
 org.gnome.settings-daemon.plugins.background priority 0
 org.gnome.settings-daemon.plugins.clipboard active true
 org.gnome.settings-daemon.plugins.clipboard priority 0
@@ -1063,10 +1063,10 @@ org.gnome.settings-daemon.plugins.orientation priority 0
 org.gnome.settings-daemon.plugins.power active true
 org.gnome.settings-daemon.plugins.power ambient-enabled true
 org.gnome.settings-daemon.plugins.power button-hibernate 'hibernate'
-org.gnome.settings-daemon.plugins.power button-power 'interactive'
-org.gnome.settings-daemon.plugins.power button-sleep 'suspend'
+org.gnome.settings-daemon.plugins.power button-power 'suspend'
+org.gnome.settings-daemon.plugins.power button-sleep 'hibernate'
 org.gnome.settings-daemon.plugins.power button-suspend 'suspend'
-org.gnome.settings-daemon.plugins.power critical-battery-action 'suspend'
+org.gnome.settings-daemon.plugins.power critical-battery-action 'hibernate'
 org.gnome.settings-daemon.plugins.power idle-brightness 30
 org.gnome.settings-daemon.plugins.power idle-dim true
 org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspend'
@@ -1076,17 +1076,17 @@ org.gnome.settings-daemon.plugins.power notify-perhaps-recall true
 org.gnome.settings-daemon.plugins.power percentage-action 2
 org.gnome.settings-daemon.plugins.power percentage-critical 3
 org.gnome.settings-daemon.plugins.power percentage-low 10
-org.gnome.settings-daemon.plugins.power power-button-action 'interactive'
+org.gnome.settings-daemon.plugins.power power-button-action 'suspend'
 org.gnome.settings-daemon.plugins.power priority 0
-org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
-org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 3600
+org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 1200
 org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type 'suspend'
 org.gnome.settings-daemon.plugins.power time-action 120
 org.gnome.settings-daemon.plugins.power time-critical 300
 org.gnome.settings-daemon.plugins.power time-low 1200
 org.gnome.settings-daemon.plugins.power use-time-for-policy true
-org.gnome.settings-daemon.plugins.print-notifications active false
+org.gnome.settings-daemon.plugins.print-notifications active true
 org.gnome.settings-daemon.plugins.print-notifications priority 0
 org.gnome.settings-daemon.plugins.remote-display active true
 org.gnome.settings-daemon.plugins.remote-display priority 0
@@ -1106,14 +1106,14 @@ org.gnome.settings-daemon.plugins.xrandr default-configuration-file '/etc/gnome-
 org.gnome.settings-daemon.plugins.xrandr default-monitors-setup 'follow-lid'
 org.gnome.settings-daemon.plugins.xrandr priority 0
 org.gnome.settings-daemon.plugins.xsettings active true
-org.gnome.settings-daemon.plugins.xsettings antialiasing 'rgba'
+org.gnome.settings-daemon.plugins.xsettings antialiasing 'grayscale'
 org.gnome.settings-daemon.plugins.xsettings disabled-gtk-modules @as []
 org.gnome.settings-daemon.plugins.xsettings enabled-gtk-modules @as []
 org.gnome.settings-daemon.plugins.xsettings hinting 'slight'
 org.gnome.settings-daemon.plugins.xsettings overrides @a{sv} {}
 org.gnome.settings-daemon.plugins.xsettings priority 0
 org.gnome.settings-daemon.plugins.xsettings rgba-order 'rgb'
-org.gnome.shell always-show-log-out true
+org.gnome.shell always-show-log-out false
 org.gnome.shell app-picker-view uint32 0
 org.gnome.shell.app-switcher current-workspace-only false
 org.gnome.shell command-history @as []
@@ -1121,7 +1121,7 @@ org.gnome.shell development-tools true
 org.gnome.shell disable-extension-version-validation true
 org.gnome.shell disable-user-extensions false
 org.gnome.shell enabled-extensions @as []
-org.gnome.shell enable-hot-corners false
+org.gnome.shell enable-hot-corners true
 org.gnome.shell.extensions.dash-to-dock activate-single-window true
 org.gnome.shell.extensions.dash-to-dock animate-show-apps true
 org.gnome.shell.extensions.dash-to-dock animation-time 0.20000000000000001
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1565622712
+org.gnome.software check-timestamp int64 1565791588
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1248,7 +1248,7 @@ org.gnome.software enable-shell-extensions-repo true
 org.gnome.software external-appstream-system-wide false
 org.gnome.software external-appstream-urls @as []
 org.gnome.software filter-default-branch true
-org.gnome.software first-run false
+org.gnome.software first-run true
 org.gnome.software free-repos ['ubuntu-*-main', 'ubuntu-*-universe']
 org.gnome.software free-repos-url 'https://www.ubuntu.com/about/about-ubuntu/licensing'
 org.gnome.software install-bundles-system-wide true
@@ -1432,13 +1432,13 @@ org.gtk.Settings.FileChooser date-format 'regular'
 org.gtk.Settings.FileChooser expand-folders false
 org.gtk.Settings.FileChooser last-folder-uri ''
 org.gtk.Settings.FileChooser location-mode 'path-bar'
-org.gtk.Settings.FileChooser show-hidden true
+org.gtk.Settings.FileChooser show-hidden false
 org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser sidebar-width 196
 org.gtk.Settings.FileChooser sort-column 'name'
 org.gtk.Settings.FileChooser sort-directories-first false
 org.gtk.Settings.FileChooser sort-order 'ascending'
-org.gtk.Settings.FileChooser startup-mode 'cwd'
+org.gtk.Settings.FileChooser startup-mode 'recent'
 org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
 org.yorba.shotwell.crop-settings last-crop-height 1
