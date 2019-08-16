@@ -2,12 +2,7 @@
 # to branch out and call other customizations - overriding/customizing
 # the default settings
 
-test -r ~/.bash_customizations && . ~/.bash_customizations
 
-
-if [ -f ~/.bash_aliases.secret ]; then
-    . ~/.bash_aliases.secret
-fi
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -19,7 +14,7 @@ alias ls='LC_ALL=C ls --group-directories-first -F $LS_OPTIONS'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
+alias touchpart-restart='sudo modprobe -r psmouse && sudo modprobe psmouse'
 alias dul='du -h --max-depth=1'
 alias hi='history | tail -20'
 alias cat='cat -v'
@@ -98,3 +93,10 @@ extract () {
   fi
 }
 
+
+test -r ~/.bash_customizations && . ~/.bash_customizations
+
+
+if [ -f ~/.bash_aliases.secret ]; then
+    . ~/.bash_aliases.secret
+fi
