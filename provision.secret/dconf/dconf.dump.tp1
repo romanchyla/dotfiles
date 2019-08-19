@@ -31,8 +31,8 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-count 1
-com.ubuntu.update-manager launch-time int64 1565412677
+com.ubuntu.update-manager launch-count 2
+com.ubuntu.update-manager launch-time int64 1566181128
 com.ubuntu.update-manager show-details false
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -305,7 +305,7 @@ org.gnome.desktop.media-handling autorun-never false
 org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
-org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk']
+org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks']
 org.gnome.desktop.notifications show-banners true
 org.gnome.desktop.notifications show-in-lock-screen true
 org.gnome.desktop.peripherals.keyboard delay uint32 500
@@ -804,7 +804,7 @@ org.gnome.nautilus.preferences show-move-to-trash-shortcut-changed-dialog true
 org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
 org.gnome.nautilus.preferences thumbnail-limit uint64 10485760
 org.gnome.nautilus.preferences use-experimental-views false
-org.gnome.nautilus.window-state geometry ''
+org.gnome.nautilus.window-state geometry '890x547+398+413'
 org.gnome.nautilus.window-state maximized false
 org.gnome.nautilus.window-state sidebar-width 211
 org.gnome.nautilus.window-state start-with-location-bar true
@@ -1116,7 +1116,7 @@ org.gnome.settings-daemon.plugins.xsettings rgba-order 'rgb'
 org.gnome.shell always-show-log-out false
 org.gnome.shell app-picker-view uint32 0
 org.gnome.shell.app-switcher current-workspace-only false
-org.gnome.shell command-history @as []
+org.gnome.shell command-history ['/dvt/eclipse/eclipse']
 org.gnome.shell development-tools true
 org.gnome.shell disable-extension-version-validation true
 org.gnome.shell disable-user-extensions false
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1565965134
+org.gnome.software check-timestamp int64 1566217197
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1431,8 +1431,8 @@ org.gtk.Settings.FileChooser clock-format '24h'
 org.gtk.Settings.FileChooser date-format 'regular'
 org.gtk.Settings.FileChooser expand-folders false
 org.gtk.Settings.FileChooser last-folder-uri ''
-org.gtk.Settings.FileChooser location-mode 'path-bar'
-org.gtk.Settings.FileChooser show-hidden true
+org.gtk.Settings.FileChooser location-mode 'filename-entry'
+org.gtk.Settings.FileChooser show-hidden false
 org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser sidebar-width 196
 org.gtk.Settings.FileChooser sort-column 'name'
