@@ -31,8 +31,8 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-count 4
-com.ubuntu.update-manager launch-time int64 1567443010
+com.ubuntu.update-manager launch-count 5
+com.ubuntu.update-manager launch-time int64 1568078398
 com.ubuntu.update-manager show-details false
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -41,7 +41,7 @@ com.ubuntu.update-manager window-width 1
 com.ubuntu.update-notifier end-system-uids 500
 com.ubuntu.update-notifier no-show-notifications false
 com.ubuntu.update-notifier regular-auto-launch-interval 7
-com.ubuntu.update-notifier release-check-time uint32 1566701965
+com.ubuntu.update-notifier release-check-time uint32 1567911615
 com.ubuntu.update-notifier show-apport-crashes true
 com.ubuntu.update-notifier show-livepatch-status-icon true
 com.ubuntu.user-interface.desktop cursor-size 24
@@ -117,7 +117,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel 'power'
+org.gnome.ControlCenter last-panel 'sound'
 org.gnome.crypto.cache gpg-cache-method 'session'
 org.gnome.crypto.cache gpg-cache-ttl 300
 org.gnome.crypto.pgp ascii-armor true
@@ -161,7 +161,7 @@ org.gnome.DejaDup.OpenStack tenant ''
 org.gnome.DejaDup.OpenStack username ''
 org.gnome.DejaDup periodic false
 org.gnome.DejaDup periodic-period 7
-org.gnome.DejaDup prompt-check '2019-08-10T04:54:15.623541Z'
+org.gnome.DejaDup prompt-check '2019-09-10T01:22:56.107208Z'
 org.gnome.DejaDup.Rackspace container '$HOSTNAME'
 org.gnome.DejaDup.Rackspace username ''
 org.gnome.DejaDup.Remote folder '$HOSTNAME'
@@ -305,7 +305,7 @@ org.gnome.desktop.media-handling autorun-never false
 org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
-org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks', 'gnome-network-panel']
+org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks', 'gnome-network-panel', 'firefox', 'eog', 'google-chrome', 'org-gnome-dejadup']
 org.gnome.desktop.notifications show-banners true
 org.gnome.desktop.notifications show-in-lock-screen true
 org.gnome.desktop.peripherals.keyboard delay uint32 500
@@ -498,7 +498,7 @@ org.gnome.eog.ui scroll-buttons true
 org.gnome.eog.ui sidebar true
 org.gnome.eog.ui statusbar false
 org.gnome.eog.view autorotate true
-org.gnome.eog.view background-color '#000000'
+org.gnome.eog.view background-color 'rgb(0,0,0)'
 org.gnome.eog.view extrapolate true
 org.gnome.eog.view interpolate true
 org.gnome.eog.view scroll-wheel-zoom true
@@ -518,7 +518,7 @@ org.gnome.Evince.Default show-toolbar true
 org.gnome.Evince.Default sidebar-page 'links'
 org.gnome.Evince.Default sidebar-size 132
 org.gnome.Evince.Default sizing-mode 'fit-width'
-org.gnome.Evince.Default window-ratio (2.6399884883394571, 1.279040404040404)
+org.gnome.Evince.Default window-ratio (2.2007125890736341, 1.2773109243697478)
 org.gnome.Evince.Default zoom 1.0
 org.gnome.Evince document-directory @ms nothing
 org.gnome.Evince override-restrictions true
@@ -804,8 +804,8 @@ org.gnome.nautilus.preferences show-move-to-trash-shortcut-changed-dialog true
 org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
 org.gnome.nautilus.preferences thumbnail-limit uint64 10485760
 org.gnome.nautilus.preferences use-experimental-views false
-org.gnome.nautilus.window-state geometry '890x545+472+165'
-org.gnome.nautilus.window-state maximized false
+org.gnome.nautilus.window-state geometry '890x543+95+55'
+org.gnome.nautilus.window-state maximized true
 org.gnome.nautilus.window-state sidebar-width 211
 org.gnome.nautilus.window-state start-with-location-bar true
 org.gnome.nautilus.window-state start-with-sidebar true
@@ -854,7 +854,7 @@ org.gnome.rhythmbox.player play-order 'linear'
 org.gnome.rhythmbox.player transition-time 0.0
 org.gnome.rhythmbox.player use-xfade-backend false
 org.gnome.rhythmbox.player volume 1.0
-org.gnome.rhythmbox.plugins active-plugins @as []
+org.gnome.rhythmbox.plugins active-plugins ['iradio', 'power-manager', 'audioscrobbler', 'mmkeys', 'mtpdevice', 'android', 'dbus-media-server', 'audiocd', 'generic-player', 'notification', 'ipod', 'rb', 'alternative-toolbar', 'mpris', 'daap', 'artsearch']
 org.gnome.rhythmbox.plugins.alternative_toolbar app-menu-display false
 org.gnome.rhythmbox.plugins.alternative_toolbar compact-progressbar false
 org.gnome.rhythmbox.plugins.alternative_toolbar dark-theme false
@@ -867,13 +867,13 @@ org.gnome.rhythmbox.plugins.alternative_toolbar inline-label true
 org.gnome.rhythmbox.plugins.alternative_toolbar playing-label false
 org.gnome.rhythmbox.plugins.alternative_toolbar repeat-type 2
 org.gnome.rhythmbox.plugins.alternative_toolbar show-compact true
-org.gnome.rhythmbox.plugins.alternative_toolbar show-source-toolbar true
+org.gnome.rhythmbox.plugins.alternative_toolbar show-source-toolbar false
 org.gnome.rhythmbox.plugins.alternative_toolbar show-tooltips true
 org.gnome.rhythmbox.plugins.alternative_toolbar start-hidden false
 org.gnome.rhythmbox.plugins.alternative_toolbar volume-control false
 org.gnome.rhythmbox.plugins.daap.dacp enable-remote false
 org.gnome.rhythmbox.plugins.daap.dacp known-remotes @as []
-org.gnome.rhythmbox.plugins.iradio initial-stations-loaded false
+org.gnome.rhythmbox.plugins.iradio initial-stations-loaded true
 org.gnome.rhythmbox.plugins.iradio.source paned-position 200
 org.gnome.rhythmbox.plugins.iradio.source search-type 'search-match'
 org.gnome.rhythmbox.plugins.iradio.source show-browser true
@@ -886,7 +886,7 @@ org.gnome.rhythmbox.plugins no-user-plugins false
 org.gnome.rhythmbox.plugins.replaygain limiter true
 org.gnome.rhythmbox.plugins.replaygain mode 'radio'
 org.gnome.rhythmbox.plugins.replaygain preamp 0.0
-org.gnome.rhythmbox.plugins seen-plugins @as []
+org.gnome.rhythmbox.plugins seen-plugins ['audioscrobbler', 'mtpdevice', 'pythonconsole', 'dbus-media-server', 'notification', 'rblirc', 'ipod', 'rb', 'alternative-toolbar', 'magnatune', 'sendto', 'im-status', 'lyrics', 'webremote', 'mpris', 'daap', 'fmradio', 'artsearch', 'replaygain', 'soundcloud', 'grilo']
 org.gnome.rhythmbox.plugins.webremote access-key ''
 org.gnome.rhythmbox.plugins.webremote listen-port uint16 0
 org.gnome.rhythmbox.podcast download-interval 'hourly'
@@ -895,10 +895,10 @@ org.gnome.rhythmbox.podcast-source paned-position 180
 org.gnome.rhythmbox.podcast-source search-type 'search-match'
 org.gnome.rhythmbox.podcast-source show-browser true
 org.gnome.rhythmbox.podcast-source sorting ('Feed', true)
-org.gnome.rhythmbox position (-1, -1)
+org.gnome.rhythmbox position (67, 27)
 org.gnome.rhythmbox queue-as-sidebar false
 org.gnome.rhythmbox.rhythmdb grace-period 45
-org.gnome.rhythmbox.rhythmdb locations @as []
+org.gnome.rhythmbox.rhythmdb locations ['file:///home/rchyla/Music']
 org.gnome.rhythmbox.rhythmdb monitor-library false
 org.gnome.rhythmbox right-paned-position 400
 org.gnome.rhythmbox.sharing enable-browsing true
@@ -947,7 +947,7 @@ org.gnome.rhythmbox.source sorting ('Artist', true)
 org.gnome.rhythmbox.source sorting ('Artist', true)
 org.gnome.rhythmbox.source sorting ('Artist', true)
 org.gnome.rhythmbox.sources visible-columns ['track-number', 'artist', 'album', 'genre', 'duration', 'post-time']
-org.gnome.rhythmbox statusbar-visible true
+org.gnome.rhythmbox statusbar-visible false
 org.gnome.rhythmbox time-display true
 org.gnome.seahorse last-search-servers @as []
 org.gnome.seahorse last-search-text ''
@@ -1210,7 +1210,7 @@ org.gnome.shell.extensions.dash-to-dock show-windows-preview true
 org.gnome.shell.extensions.dash-to-dock transparency-mode 'ADAPTIVE'
 org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
 org.gnome.shell favorite-apps ['ubiquity.desktop', 'firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'org.gnome.Software.desktop', 'yelp.desktop', 'ubuntu-amazon-default.desktop']
-org.gnome.shell had-bluetooth-devices-setup false
+org.gnome.shell had-bluetooth-devices-setup true
 org.gnome.shell.keybindings focus-active-notification ['<Super>n']
 org.gnome.shell.keybindings open-application-menu ['<Super>F10']
 org.gnome.shell.keybindings pause-resume-tweens @as []
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1567424698
+org.gnome.software check-timestamp int64 1568465092
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1387,7 +1387,7 @@ org.gnome.todo view 'grid'
 org.gnome.todo window-maximized true
 org.gnome.todo window-position @ai []
 org.gnome.todo window-size [800, 600]
-org.gnome.totem active-plugins ['skipto', 'chapters', 'screenshot', 'media_player_keys', 'screensaver', 'movie-properties', 'save-file']
+org.gnome.totem active-plugins ['apple-trailers', 'screensaver', 'skipto', 'save-file', 'movie-properties', 'media_player_keys', 'screenshot', 'vimeo', 'variable-rate', 'autoload-subtitles', 'recent']
 org.gnome.totem audio-output-type 'stereo'
 org.gnome.totem autoload-chapters true
 org.gnome.totem autoload-subtitles false
@@ -1437,7 +1437,7 @@ org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser sidebar-width 196
 org.gtk.Settings.FileChooser sort-column 'name'
 org.gtk.Settings.FileChooser sort-directories-first false
-org.gtk.Settings.FileChooser sort-order 'ascending'
+org.gtk.Settings.FileChooser sort-order 'descending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
 org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
