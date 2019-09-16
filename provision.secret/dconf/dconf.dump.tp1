@@ -518,7 +518,7 @@ org.gnome.Evince.Default show-toolbar true
 org.gnome.Evince.Default sidebar-page 'links'
 org.gnome.Evince.Default sidebar-size 132
 org.gnome.Evince.Default sizing-mode 'fit-width'
-org.gnome.Evince.Default window-ratio (2.2007125890736341, 1.2773109243697478)
+org.gnome.Evince.Default window-ratio (2.2009803921568629, 1.2765151515151516)
 org.gnome.Evince.Default zoom 1.0
 org.gnome.Evince document-directory @ms nothing
 org.gnome.Evince override-restrictions true
@@ -556,11 +556,11 @@ org.gnome.evolution.shell.network-config socks-host ''
 org.gnome.evolution.shell.network-config socks-port 0
 org.gnome.evolution.shell.network-config use-authentication false
 org.gnome.evolution.shell.network-config use-http-proxy false
-org.gnome.FileRoller.Dialogs.Add current-folder ''
+org.gnome.FileRoller.Dialogs.Add current-folder 'file:///home/rchyla/Dropbox/heating'
 org.gnome.FileRoller.Dialogs.Add exclude-files ''
 org.gnome.FileRoller.Dialogs.Add exclude-folders ''
 org.gnome.FileRoller.Dialogs.Add filename ''
-org.gnome.FileRoller.Dialogs.Add include-files ''
+org.gnome.FileRoller.Dialogs.Add include-files '*'
 org.gnome.FileRoller.Dialogs.Add no-symlinks true
 org.gnome.FileRoller.Dialogs.Add recursive true
 org.gnome.FileRoller.Dialogs.Add selected-files @as []
@@ -574,8 +574,8 @@ org.gnome.FileRoller.Dialogs.New encrypt-header false
 org.gnome.FileRoller.Dialogs.New other-options false
 org.gnome.FileRoller.Dialogs.New volume-size 0
 org.gnome.FileRoller.FileSelector show-hidden false
-org.gnome.FileRoller.FileSelector sidebar-size -1
-org.gnome.FileRoller.FileSelector window-size (-1, -1)
+org.gnome.FileRoller.FileSelector sidebar-size 168
+org.gnome.FileRoller.FileSelector window-size (840, 764)
 org.gnome.FileRoller.General compression-level 'normal'
 org.gnome.FileRoller.General editors @as []
 org.gnome.FileRoller.General encrypt-header false
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1568545127
+org.gnome.software check-timestamp int64 1568628221
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
