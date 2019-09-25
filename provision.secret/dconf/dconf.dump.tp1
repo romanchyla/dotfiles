@@ -31,8 +31,8 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-count 6
-com.ubuntu.update-manager launch-time int64 1568768852
+com.ubuntu.update-manager launch-count 7
+com.ubuntu.update-manager launch-time int64 1569407714
 com.ubuntu.update-manager show-details false
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1569330438
+org.gnome.software check-timestamp int64 1569408981
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1439,7 +1439,7 @@ org.gtk.Settings.FileChooser sort-column 'modified'
 org.gtk.Settings.FileChooser sort-directories-first false
 org.gtk.Settings.FileChooser sort-order 'descending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
-org.gtk.Settings.FileChooser window-position (67, 27)
+org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
 org.yorba.shotwell.crop-settings last-crop-height 1
 org.yorba.shotwell.crop-settings last-crop-menu-choice 1
