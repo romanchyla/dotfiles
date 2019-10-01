@@ -603,7 +603,7 @@ org.gnome.gedit.plugins.filebrowser.nautilus confirm-trash true
 org.gnome.gedit.plugins.filebrowser open-at-first-doc true
 org.gnome.gedit.plugins.filebrowser root 'file:///'
 org.gnome.gedit.plugins.filebrowser tree-view true
-org.gnome.gedit.plugins.filebrowser virtual-root 'file:///media/rchyla/KEYDISK/dotfiles'
+org.gnome.gedit.plugins.filebrowser virtual-root 'file:///dvt/workspace/adsrex'
 org.gnome.gedit.plugins.pythonconsole command-color '#314e6c'
 org.gnome.gedit.plugins.pythonconsole error-color '#990000'
 org.gnome.gedit.plugins.pythonconsole font 'Monospace 10'
@@ -658,10 +658,10 @@ org.gnome.gedit.state.history-entry replace-with-entry ['']
 org.gnome.gedit.state.history-entry search-for-entry ['']
 org.gnome.gedit.state.window bottom-panel-active-page ''
 org.gnome.gedit.state.window bottom-panel-size 140
-org.gnome.gedit.state.window side-panel-active-page ''
+org.gnome.gedit.state.window side-panel-active-page 'GeditWindowDocumentsPanel'
 org.gnome.gedit.state.window side-panel-size 200
 org.gnome.gedit.state.window size (900, 700)
-org.gnome.gedit.state.window state 0
+org.gnome.gedit.state.window state 87168
 org.gnome.gnome-screenshot auto-save-directory ''
 org.gnome.gnome-screenshot border-effect 'none'
 org.gnome.gnome-screenshot default-file-type 'png'
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1569847751
+org.gnome.software check-timestamp int64 1569940157
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1439,7 +1439,7 @@ org.gtk.Settings.FileChooser sort-column 'name'
 org.gtk.Settings.FileChooser sort-directories-first false
 org.gtk.Settings.FileChooser sort-order 'ascending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
-org.gtk.Settings.FileChooser window-position (176, 27)
+org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
 org.yorba.shotwell.crop-settings last-crop-height 1
 org.yorba.shotwell.crop-settings last-crop-menu-choice 1
