@@ -31,8 +31,8 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-count 9
-com.ubuntu.update-manager launch-time int64 1571072464
+com.ubuntu.update-manager launch-count 10
+com.ubuntu.update-manager launch-time int64 1571687761
 com.ubuntu.update-manager show-details false
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -41,7 +41,7 @@ com.ubuntu.update-manager window-width 1
 com.ubuntu.update-notifier end-system-uids 500
 com.ubuntu.update-notifier no-show-notifications false
 com.ubuntu.update-notifier regular-auto-launch-interval 7
-com.ubuntu.update-notifier release-check-time uint32 1570458393
+com.ubuntu.update-notifier release-check-time uint32 1571687999
 com.ubuntu.update-notifier show-apport-crashes true
 com.ubuntu.update-notifier show-livepatch-status-icon true
 com.ubuntu.user-interface.desktop cursor-size 24
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1571221635
+org.gnome.software check-timestamp int64 1571687658
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1435,9 +1435,9 @@ org.gtk.Settings.FileChooser location-mode 'path-bar'
 org.gtk.Settings.FileChooser show-hidden false
 org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser sidebar-width 196
-org.gtk.Settings.FileChooser sort-column 'name'
+org.gtk.Settings.FileChooser sort-column 'modified'
 org.gtk.Settings.FileChooser sort-directories-first false
-org.gtk.Settings.FileChooser sort-order 'ascending'
+org.gtk.Settings.FileChooser sort-order 'descending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
 org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
