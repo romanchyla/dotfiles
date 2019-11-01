@@ -117,7 +117,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel 'sound'
+org.gnome.ControlCenter last-panel 'printers'
 org.gnome.crypto.cache gpg-cache-method 'session'
 org.gnome.crypto.cache gpg-cache-ttl 300
 org.gnome.crypto.pgp ascii-armor true
@@ -305,7 +305,7 @@ org.gnome.desktop.media-handling autorun-never false
 org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
-org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks', 'gnome-network-panel', 'firefox', 'eog', 'google-chrome', 'org-gnome-dejadup', 'libreoffice-writer', 'libreoffice-calc']
+org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks', 'gnome-network-panel', 'firefox', 'eog', 'google-chrome', 'org-gnome-dejadup', 'libreoffice-writer', 'libreoffice-calc', 'system-config-printer']
 org.gnome.desktop.notifications show-banners true
 org.gnome.desktop.notifications show-in-lock-screen true
 org.gnome.desktop.peripherals.keyboard delay uint32 500
@@ -1235,12 +1235,12 @@ org.gnome.SimpleScan page-delay 1000
 org.gnome.SimpleScan page-side 'both'
 org.gnome.SimpleScan paper-height 0
 org.gnome.SimpleScan paper-width 0
-org.gnome.SimpleScan photo-dpi 300
+org.gnome.SimpleScan photo-dpi 600
 org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1572525651
+org.gnome.software check-timestamp int64 1572614175
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1439,7 +1439,7 @@ org.gtk.Settings.FileChooser sort-column 'modified'
 org.gtk.Settings.FileChooser sort-directories-first false
 org.gtk.Settings.FileChooser sort-order 'descending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
-org.gtk.Settings.FileChooser window-position (392, 82)
+org.gtk.Settings.FileChooser window-position (67, 27)
 org.gtk.Settings.FileChooser window-size (1203, 902)
 org.yorba.shotwell.crop-settings last-crop-height 1
 org.yorba.shotwell.crop-settings last-crop-menu-choice 1
