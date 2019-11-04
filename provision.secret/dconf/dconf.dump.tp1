@@ -41,7 +41,7 @@ com.ubuntu.update-manager window-width 1
 com.ubuntu.update-notifier end-system-uids 500
 com.ubuntu.update-notifier no-show-notifications false
 com.ubuntu.update-notifier regular-auto-launch-interval 7
-com.ubuntu.update-notifier release-check-time uint32 1571687999
+com.ubuntu.update-notifier release-check-time uint32 1572898075
 com.ubuntu.update-notifier show-apport-crashes true
 com.ubuntu.update-notifier show-livepatch-status-icon true
 com.ubuntu.user-interface.desktop cursor-size 24
@@ -117,7 +117,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel 'printers'
+org.gnome.ControlCenter last-panel 'bluetooth'
 org.gnome.crypto.cache gpg-cache-method 'session'
 org.gnome.crypto.cache gpg-cache-ttl 300
 org.gnome.crypto.pgp ascii-armor true
@@ -518,7 +518,7 @@ org.gnome.Evince.Default show-toolbar true
 org.gnome.Evince.Default sidebar-page 'links'
 org.gnome.Evince.Default sidebar-size 132
 org.gnome.Evince.Default sizing-mode 'fit-width'
-org.gnome.Evince.Default window-ratio (2.3396464646464645, 1.279040404040404)
+org.gnome.Evince.Default window-ratio (2.3396532432199306, 1.2008267103959214)
 org.gnome.Evince.Default zoom 1.0
 org.gnome.Evince document-directory @ms nothing
 org.gnome.Evince override-restrictions true
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1572614175
+org.gnome.software check-timestamp int64 1572879481
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1435,11 +1435,11 @@ org.gtk.Settings.FileChooser location-mode 'path-bar'
 org.gtk.Settings.FileChooser show-hidden false
 org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser sidebar-width 196
-org.gtk.Settings.FileChooser sort-column 'modified'
+org.gtk.Settings.FileChooser sort-column 'name'
 org.gtk.Settings.FileChooser sort-directories-first false
-org.gtk.Settings.FileChooser sort-order 'descending'
+org.gtk.Settings.FileChooser sort-order 'ascending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
-org.gtk.Settings.FileChooser window-position (67, 27)
+org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
 org.yorba.shotwell.crop-settings last-crop-height 1
 org.yorba.shotwell.crop-settings last-crop-menu-choice 1
