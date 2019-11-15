@@ -31,8 +31,8 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-count 12
-com.ubuntu.update-manager launch-time int64 1572964116
+com.ubuntu.update-manager launch-count 13
+com.ubuntu.update-manager launch-time int64 1573575382
 com.ubuntu.update-manager show-details false
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -161,7 +161,7 @@ org.gnome.DejaDup.OpenStack tenant ''
 org.gnome.DejaDup.OpenStack username ''
 org.gnome.DejaDup periodic false
 org.gnome.DejaDup periodic-period 7
-org.gnome.DejaDup prompt-check '2019-10-14T17:01:03.071028Z'
+org.gnome.DejaDup prompt-check '2019-11-14T15:08:30.111225Z'
 org.gnome.DejaDup.Rackspace container '$HOSTNAME'
 org.gnome.DejaDup.Rackspace username ''
 org.gnome.DejaDup.Remote folder '$HOSTNAME'
@@ -305,7 +305,7 @@ org.gnome.desktop.media-handling autorun-never false
 org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software']
-org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks', 'gnome-network-panel', 'firefox', 'eog', 'google-chrome', 'org-gnome-dejadup', 'libreoffice-writer', 'libreoffice-calc', 'system-config-printer']
+org.gnome.desktop.notifications application-children ['update-manager', 'org-gnome-software', 'org-gnome-nautilus', 'apport-gtk', 'org-gnome-tweaks', 'gnome-network-panel', 'firefox', 'eog', 'google-chrome', 'org-gnome-dejadup', 'libreoffice-writer', 'libreoffice-calc', 'system-config-printer', 'gimp']
 org.gnome.desktop.notifications show-banners true
 org.gnome.desktop.notifications show-in-lock-screen true
 org.gnome.desktop.peripherals.keyboard delay uint32 500
@@ -518,7 +518,7 @@ org.gnome.Evince.Default show-toolbar true
 org.gnome.Evince.Default sidebar-page 'links'
 org.gnome.Evince.Default sidebar-size 132
 org.gnome.Evince.Default sizing-mode 'fit-width'
-org.gnome.Evince.Default window-ratio (2.3398692810457518, 1.2007575757575757)
+org.gnome.Evince.Default window-ratio (3.0277777777777777, 1.279040404040404)
 org.gnome.Evince.Default zoom 1.0
 org.gnome.Evince document-directory @ms nothing
 org.gnome.Evince override-restrictions true
@@ -603,7 +603,7 @@ org.gnome.gedit.plugins.filebrowser.nautilus confirm-trash true
 org.gnome.gedit.plugins.filebrowser open-at-first-doc true
 org.gnome.gedit.plugins.filebrowser root 'file:///'
 org.gnome.gedit.plugins.filebrowser tree-view true
-org.gnome.gedit.plugins.filebrowser virtual-root 'file:///dvt/workspace/adsrex'
+org.gnome.gedit.plugins.filebrowser virtual-root 'file:///home/rchyla/Downloads'
 org.gnome.gedit.plugins.pythonconsole command-color '#314e6c'
 org.gnome.gedit.plugins.pythonconsole error-color '#990000'
 org.gnome.gedit.plugins.pythonconsole font 'Monospace 10'
@@ -804,7 +804,7 @@ org.gnome.nautilus.preferences show-move-to-trash-shortcut-changed-dialog true
 org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
 org.gnome.nautilus.preferences thumbnail-limit uint64 10485760
 org.gnome.nautilus.preferences use-experimental-views false
-org.gnome.nautilus.window-state geometry '890x542+95+55'
+org.gnome.nautilus.window-state geometry '890x541+95+55'
 org.gnome.nautilus.window-state maximized false
 org.gnome.nautilus.window-state sidebar-width 211
 org.gnome.nautilus.window-state start-with-location-bar true
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1573489164
+org.gnome.software check-timestamp int64 1573833837
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
