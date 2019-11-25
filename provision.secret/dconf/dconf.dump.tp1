@@ -804,7 +804,7 @@ org.gnome.nautilus.preferences show-move-to-trash-shortcut-changed-dialog true
 org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
 org.gnome.nautilus.preferences thumbnail-limit uint64 10485760
 org.gnome.nautilus.preferences use-experimental-views false
-org.gnome.nautilus.window-state geometry '890x541+95+55'
+org.gnome.nautilus.window-state geometry '890x540+95+55'
 org.gnome.nautilus.window-state maximized false
 org.gnome.nautilus.window-state sidebar-width 211
 org.gnome.nautilus.window-state start-with-location-bar true
@@ -1209,7 +1209,7 @@ org.gnome.shell.extensions.dash-to-dock show-show-apps-button true
 org.gnome.shell.extensions.dash-to-dock show-windows-preview true
 org.gnome.shell.extensions.dash-to-dock transparency-mode 'ADAPTIVE'
 org.gnome.shell.extensions.dash-to-dock unity-backlit-items false
-org.gnome.shell favorite-apps ['ubiquity.desktop', 'firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'libreoffice-writer.desktop', 'org.gnome.Software.desktop', 'yelp.desktop', 'ubuntu-amazon-default.desktop']
+org.gnome.shell favorite-apps ['firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'rhythmbox.desktop', 'org.gnome.Software.desktop', 'libreoffice-writer.desktop', 'yelp.desktop', 'ubuntu-amazon-default.desktop']
 org.gnome.shell had-bluetooth-devices-setup true
 org.gnome.shell.keybindings focus-active-notification ['<Super>n']
 org.gnome.shell.keybindings open-application-menu ['<Super>F10']
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1574440197
+org.gnome.software check-timestamp int64 1574694626
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
