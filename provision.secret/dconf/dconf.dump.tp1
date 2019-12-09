@@ -31,8 +31,8 @@ com.ubuntu.update-manager autoclose-install-window true
 com.ubuntu.update-manager check-dist-upgrades true
 com.ubuntu.update-manager check-new-release-ignore ''
 com.ubuntu.update-manager first-run false
-com.ubuntu.update-manager launch-count 14
-com.ubuntu.update-manager launch-time int64 1574262017
+com.ubuntu.update-manager launch-count 16
+com.ubuntu.update-manager launch-time int64 1575900089
 com.ubuntu.update-manager show-details false
 com.ubuntu.update-manager show-versions false
 com.ubuntu.update-manager summary-before-name true
@@ -41,7 +41,7 @@ com.ubuntu.update-manager window-width 1
 com.ubuntu.update-notifier end-system-uids 500
 com.ubuntu.update-notifier no-show-notifications false
 com.ubuntu.update-notifier regular-auto-launch-interval 7
-com.ubuntu.update-notifier release-check-time uint32 1574108193
+com.ubuntu.update-notifier release-check-time uint32 1575384833
 com.ubuntu.update-notifier show-apport-crashes true
 com.ubuntu.update-notifier show-livepatch-status-icon true
 com.ubuntu.user-interface.desktop cursor-size 24
@@ -804,7 +804,7 @@ org.gnome.nautilus.preferences show-move-to-trash-shortcut-changed-dialog true
 org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
 org.gnome.nautilus.preferences thumbnail-limit uint64 10485760
 org.gnome.nautilus.preferences use-experimental-views false
-org.gnome.nautilus.window-state geometry '890x540+95+55'
+org.gnome.nautilus.window-state geometry '890x539+95+55'
 org.gnome.nautilus.window-state maximized false
 org.gnome.nautilus.window-state sidebar-width 211
 org.gnome.nautilus.window-state start-with-location-bar true
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1574777463
+org.gnome.software check-timestamp int64 1575900092
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
