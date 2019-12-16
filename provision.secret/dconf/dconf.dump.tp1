@@ -161,7 +161,7 @@ org.gnome.DejaDup.OpenStack tenant ''
 org.gnome.DejaDup.OpenStack username ''
 org.gnome.DejaDup periodic false
 org.gnome.DejaDup periodic-period 7
-org.gnome.DejaDup prompt-check '2019-11-14T15:08:30.111225Z'
+org.gnome.DejaDup prompt-check '2019-12-16T05:06:33.697038Z'
 org.gnome.DejaDup.Rackspace container '$HOSTNAME'
 org.gnome.DejaDup.Rackspace username ''
 org.gnome.DejaDup.Remote folder '$HOSTNAME'
@@ -1240,7 +1240,7 @@ org.gnome.SimpleScan save-directory ''
 org.gnome.SimpleScan selected-device ''
 org.gnome.SimpleScan text-dpi 150
 org.gnome.software allow-updates true
-org.gnome.software check-timestamp int64 1576250623
+org.gnome.software check-timestamp int64 1576494222
 org.gnome.software compatible-projects ['GNOME', 'KDE', 'XFCE']
 org.gnome.software download-updates true
 org.gnome.software enable-repos-dialog true
@@ -1431,7 +1431,7 @@ org.gtk.Settings.FileChooser clock-format '24h'
 org.gtk.Settings.FileChooser date-format 'regular'
 org.gtk.Settings.FileChooser expand-folders false
 org.gtk.Settings.FileChooser last-folder-uri ''
-org.gtk.Settings.FileChooser location-mode 'filename-entry'
+org.gtk.Settings.FileChooser location-mode 'path-bar'
 org.gtk.Settings.FileChooser show-hidden false
 org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser sidebar-width 196
@@ -1439,7 +1439,7 @@ org.gtk.Settings.FileChooser sort-column 'modified'
 org.gtk.Settings.FileChooser sort-directories-first false
 org.gtk.Settings.FileChooser sort-order 'descending'
 org.gtk.Settings.FileChooser startup-mode 'recent'
-org.gtk.Settings.FileChooser window-position (176, 27)
+org.gtk.Settings.FileChooser window-position (392, 82)
 org.gtk.Settings.FileChooser window-size (1203, 902)
 org.yorba.shotwell.crop-settings last-crop-height 1
 org.yorba.shotwell.crop-settings last-crop-menu-choice 1
