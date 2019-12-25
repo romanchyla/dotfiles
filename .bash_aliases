@@ -24,7 +24,7 @@ alias gc='git commit'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gdiff='git diff'
-alias gl='git prettylog'
+alias gl='git log --pretty'
 alias gp='git push'
 alias gs='git status'
 alias gt='git tag'
@@ -91,6 +91,25 @@ extract () {
   else
       echo "'$1' is not a valid file!"
   fi
+}
+
+init-python () {
+   if [ -e python ]; then
+     echo "python already exists; please remove manually if you want me to recreate it"
+   else
+     echo "initializing python in " `pwd`
+     virtualenv python
+   fi
+
+   source python/bin/activate
+
+   if [ -f requirements.txt ]; then
+     pip install -r requirements.txt
+   fi
+
+   if [ -f dev-requirements.txt ]; then
+     pip install -r dev-requirements.txt
+   fi
 }
 
 
